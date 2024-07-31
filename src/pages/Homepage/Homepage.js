@@ -10,6 +10,8 @@ import contractIcon from "../../assets/svgs/contract-Icon.svg";
 import rightIcon from "../../assets/svgs/right-icon.svg";
 
 import "./Homepage.css";
+import Offerings from "../../components/Offerings/Offerings";
+import BusinessSolutions from "../../components/BusinessSolutions/BusinessSolutions";
 
 const Homepage = () => {
   return (
@@ -27,8 +29,8 @@ const Homepage = () => {
                 </span>{" "}
                 voyage.
               </h2>
-              <div className="d-flex mb-5">
-                <div className="vertical_line"></div>
+              <div className="d-flex mb-5 digital__content">
+                {/* <div className="vertical_line"></div> */}
                 <div className="description ms-4">
                   <p className="content pe-lg-4">
                     At Lucida, we understand that digital transformation is more
@@ -40,7 +42,7 @@ const Homepage = () => {
                     organizational goals and objectives.
                   </p>
                   <p className="">&nbsp;</p>
-                  <p className="content pe-lg-4">
+                  <p className="content pe-lg-4 m-0">
                     <b>
                       Venture  on your digital transformation journey with
                       Lucida, the catalyst that will propel your business into a
@@ -256,6 +258,10 @@ const Homepage = () => {
             </Col>
           </Row>
         </section>
+         {/* Offerings & Services  */}
+         <section className="offerings__section">
+          <Offerings />
+        </section>
         {/* Case Study Section  */}
         <section className="caseStudy__section">
           <h4 className="caseStudy__header mb-5">Check Out Our Case Studies</h4>
@@ -334,6 +340,10 @@ const Homepage = () => {
               </div>
             </Col>
           </Row>
+        </section>
+        {/* Business Solutions Section  */}
+        <section className="solutions__section">
+          <BusinessSolutions />
         </section>
       </Container>
     </>

@@ -16,6 +16,10 @@
     height: auto;
 }
 
+.digital__content {
+    border-left: 4px solid #797CD0;
+}
+
 
 .description .content {
     font-size: 18px;
@@ -39,7 +43,7 @@
     font-weight: 500;
 }
 
-.service__section {
+.service__section, .solutions__section {
     margin: 5rem 0rem;
 }
 
@@ -120,8 +124,8 @@
 .caseStudy__header {
     font-size: 2.019rem;
     color: #797cd0;
-    font-family: Inter; 
-    font-weight: 600;
+    font-family: Mulish; 
+    font-weight: bolder;
     text-align: center;
 }
 
@@ -147,6 +151,12 @@
     color: rgba(5, 5, 5, 0.7);
 }
 
+
+/* Offerings & Services  */
+
+.offerings__section {
+    margin: 5rem 0;
+}
 @media only screen and (max-width: 575px) {
     .vertical_line {
         width: 0.8rem;

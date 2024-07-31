@@ -1,0 +1,149 @@
+.offerings__title{
+    font-size: 2.269rem;
+    color: #797cd0;
+    font-family: Mulish;
+    font-weight: bolder;
+    text-align: start;
+}
+
+.nav-tabs {
+    justify-content: space-between;
+    border-bottom-color: #797cd0;
+    width: 100%;
+}
+.nav-tabs .nav-link {
+    border-radius: 0;
+    padding: 10px 50px;
+    color: #797cd0;
+} 
+
+.nav-tabs .nav-link:hover {
+    border-color: transparent ;
+}
+
+.nav-tabs .nav-link.active {
+    color : #fff;
+    background-color: #797cd0;
+    font-weight: 600;
+}
+
+.offerings1__img{
+    width: 100%;
+    height: auto;
+}
+
+.tag_img{
+   width: 8rem; 
+}
+.autoAi_img{
+   width: 13rem ; 
+}
+
+.list__item {
+    color: #797cd0;
+    font-family: Mulish;
+}
+
+.offerings_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 4px solid #797CD0;
+}
+
+.offerings__desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 4px solid #797CD0;
+}
+
+
+@media only screen and (max-width: 575px) {
+    .tab__column{
+        justify-content: center;
+    }
+    .offerings__title {
+        font-size: 20px;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 14px;
+        padding: 10px 30px;
+    }
+    .nav-item{
+        width: 50%;
+        text-align: center;
+    }
+    .list__item,.list__item1 {
+        font-size: 14px;
+    }
+    .tag_img{
+        width: 6rem; 
+     }
+     .autoAi_img{
+        width: 10rem ; 
+     }
+}
+@media (min-width: 576px){
+    .header__row{
+        justify-content: center;
+    }
+    .tab__column{
+        justify-content: center;
+    }
+    .offerings__title {
+        font-size: 22px;
+    }
+    .nav-tabs .nav-link {
+        font-size: 16px;
+        padding: 10px 35px;
+    }
+    .nav-item{
+        width: 50%;
+        text-align: center;
+    }
+
+    .list__item,.list__item1 {
+        font-size: 14px;
+    }
+
+    .tag_img{
+        width: 7rem; 
+     }
+     .autoAi_img{
+        width: 11rem ; 
+     }
+
+}
+@media (min-width: 768px){
+    .header__row{
+        justify-content: space-between;
+    }
+    .tab__column{
+        justify-content: end;
+    }
+    .offerings__title {
+        font-size: 28px;
+    }
+    .nav-tabs .nav-link {
+        font-size: 18px;
+        padding: 10px 40px;
+    }
+    .nav-item{
+        width: 50%;
+        text-align: center;
+    }
+    .list__item,.list__item1 {
+        font-size: 16px;
+    }
+}
+@media (min-width: 992px){
+    .offerings__title {
+        font-size: 2rem;
+    }
+
+    .list__item,.list__item1 {
+        font-size: 18px;
+    }
+}
