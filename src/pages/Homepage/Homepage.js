@@ -258,86 +258,79 @@ const Homepage = () => {
             </Col>
           </Row>
         </section>
-         {/* Offerings & Services  */}
-         <section className="offerings__section">
+        {/* Offerings & Services  */}
+        <section className="offerings__section">
           <Offerings />
         </section>
         {/* Case Study Section  */}
         <section className="caseStudy__section">
           <h4 className="caseStudy__header mb-5">Check Out Our Case Studies</h4>
           <Row className="d-flex flex-sm-column flex-md-row">
-            <Col className="col-sm-12 col-md-4 p-0">
-              <div className="d-flex flex-column flex-sm-row flex-md-column">
-                <Card className="card_layout h-100">
-                  <Card.Body>
-                    <Card.Title className="caseStudy__title">
-                      Text Duo
-                    </Card.Title>
-                    <Card.Text className="caseStudy__description">
-                      Intelligent Insights: Summarize and Extract, Effortlessly
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-                <Card className="card_layout h-100">
-                  <Card.Body>
-                    <Card.Title className="caseStudy__title">
-                      OptiScan
-                    </Card.Title>
-                    <Card.Text className="caseStudy__description">
-                      Text Discovery, Powered by AI Dialogue
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </div>
+            <Col className="col-12 col-sm-6 col-md-4 p-0">
+              <Card className="card_layout h-100">
+                <Card.Body>
+                  <Card.Title className="caseStudy__title">Text Duo</Card.Title>
+                  <Card.Text className="caseStudy__description">
+                    Intelligent Insights: Summarize and Extract, Effortlessly
+                  </Card.Text>
+                </Card.Body>
+              </Card>
             </Col>
-            <Col className="col-sm-12 col-md-4 p-0">
-              <div className="d-flex flex-column flex-sm-row flex-md-column">
-                <Card className="card_layout h-100">
-                  <Card.Body>
-                    <Card.Title className="caseStudy__title">
-                      Speechscribe
-                    </Card.Title>
-                    <Card.Text className="caseStudy__description">
-                      Speech to Script, Powered by AI
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-                <Card className="card_layout h-100">
-                  <Card.Body>
-                    <Card.Title className="caseStudy__title">PnID</Card.Title>
-                    <Card.Text className="caseStudy__description">
-                      P&ID Automation, Elevated by AI Vision
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </div>
+            <Col className="col-12 col-sm-6 col-md-4 p-0">
+              <Card className="card_layout h-100">
+                <Card.Body>
+                  <Card.Title className="caseStudy__title">
+                    Speechscribe
+                  </Card.Title>
+                  <Card.Text className="caseStudy__description">
+                    Speech to Script, Powered by AI
+                  </Card.Text>
+                </Card.Body>
+              </Card>
             </Col>
-            <Col className="col-sm-12 col-md-4 p-0">
-              <div className="d-flex flex-column flex-sm-row flex-md-column">
-                <Card className="card_layout h-100">
-                  <Card.Body>
-                    <Card.Title className="caseStudy__title">
-                      Senti-Mentify
-                    </Card.Title>
-                    <Card.Text className="caseStudy__description">
-                      Emotional Intelligence, Elevated by AI
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-                <Card className="card_layout h-100">
-                  <Card.Body>
-                    <Card.Title
-                      className="caseStudy__title"
-                      id="traffic__title"
-                    >
-                      Traffic Surveillance System
-                    </Card.Title>
-                    <Card.Text className="caseStudy__description">
-                      AI-Powered Traffic Transparency, Through CCTV Lenses
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </div>
+            <Col className="col-12 col-sm-6 col-md-4 p-0">
+              <Card className="card_layout h-100">
+                <Card.Body>
+                  <Card.Title className="caseStudy__title">
+                    Senti-Mentify
+                  </Card.Title>
+                  <Card.Text className="caseStudy__description">
+                    Emotional Intelligence, Elevated by AI
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col className="col-12 col-sm-6 col-md-4 p-0">
+              <Card className="card_layout h-100">
+                <Card.Body>
+                  <Card.Title className="caseStudy__title">OptiScan</Card.Title>
+                  <Card.Text className="caseStudy__description">
+                    Text Discovery, Powered by AI Dialogue
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col className="col-12 col-sm-6 col-md-4 p-0">
+              <Card className="card_layout h-100">
+                <Card.Body>
+                  <Card.Title className="caseStudy__title">PnID</Card.Title>
+                  <Card.Text className="caseStudy__description">
+                    P&ID Automation, Elevated by AI Vision
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col className="col-12 col-sm-6 col-md-4 p-0">
+              <Card className="card_layout h-100">
+                <Card.Body>
+                  <Card.Title className="caseStudy__title" id="traffic__title">
+                    Traffic Surveillance System
+                  </Card.Title>
+                  <Card.Text className="caseStudy__description">
+                    AI-Powered Traffic Transparency, Through CCTV Lenses
+                  </Card.Text>
+                </Card.Body>
+              </Card>
             </Col>
           </Row>
         </section>

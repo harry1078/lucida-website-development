@@ -1,0 +1,92 @@
+.aboutUs__banner,.leadership__img {
+  width: 100%;
+  height: auto;
+}
+
+.tab__row {
+  justify-content: center;
+}
+
+.workLife__header,
+.rewards__text,
+.team__heading,
+.leadership__heading,
+.leaders__name
+ {
+  color: #797cd0;
+  font-family: Mulish;
+}
+.brainStorm__text {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.workLife__header {
+  font-size: 2.5rem;
+}
+.rewards__text {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.workLife__desc {
+  font-size: 24px;
+}
+
+.leadership__heading {
+  color: #797cd0;
+  font-weight: 700;
+}
+
+.leadership__desc {
+    font-size: 20px;
+  font-style: italic;
+  color: #050505;
+}
+
+.leaders__card{
+    box-shadow: -1.5px -1.5px 4.49px rgba(0, 0, 0, 0.25),
+    1.5px 1.5px 4.49px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    text-transform: uppercase;
+}
+.leadership__img{
+    background-color: #797cd0;
+    padding: 48px 12px 16px;
+    width: 42%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+
+.leaders__name{
+    text-align: center;
+    font-weight: bold;
+}
+.leaders__role{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-wrap: wrap;
+}
+.graduationCap__icon
+{
+    color: #797cd0;
+    font-size: 20px;
+}
+
+.leaders__desc{
+    font-size: 14px;
+    font-style: italic;
+    margin-top: auto;
+}
+
+.testimonial__heading{
+    color: #797cd0;
+    font-size: 2.2rem;
+}
+
+.testimonial__desc {
+    font-size: 1.5rem;
+}

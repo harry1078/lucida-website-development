@@ -9,10 +9,13 @@
     justify-content: space-between;
 }
 
-.button__group {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+.header__column {
+    position: relative;
+}
+
+.close__icon {
+    position: absolute;
+    margin-right: auto;
 }
 
 
@@ -28,10 +31,17 @@
     font-family: Mulish;
 }
 
+.button__group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
 .demo_btn{
     background-color: #797CD0 !important;
     border-color: #797CD0;
     font-weight: 500;
+    text-wrap: nowrap;
 }
 
 .contact_btn{

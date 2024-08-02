@@ -71,7 +71,7 @@
         font-size: 14px;
         padding: 10px 30px;
     }
-    .nav-item{
+    .nav__items{
         width: 50%;
         text-align: center;
     }
@@ -99,7 +99,7 @@
         font-size: 16px;
         padding: 10px 35px;
     }
-    .nav-item{
+    .nav__items{
         width: 50%;
         text-align: center;
     }
@@ -130,7 +130,7 @@
         font-size: 18px;
         padding: 10px 40px;
     }
-    .nav-item{
+    .nav__items{
         width: 50%;
         text-align: center;
     }

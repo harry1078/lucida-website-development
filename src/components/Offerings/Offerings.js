@@ -21,10 +21,10 @@ const Offerings = () => {
           </Col>
           <Col className="d-flex tab__column">
             <Nav variant="tabs" className="flex-row">
-              <Nav.Item>
+              <Nav.Item className="nav__items">
                 <Nav.Link eventKey="first">Offerings</Nav.Link>
               </Nav.Item>
-              <Nav.Item>
+              <Nav.Item className="nav__items">
                 <Nav.Link eventKey="second">Services</Nav.Link>
               </Nav.Item>
             </Nav>

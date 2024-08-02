@@ -2,13 +2,15 @@ import React from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import solution from "../../assets/png/solution.png";
 
+
 import "./BusinessSolutions.css";
+import RequestForm from "../Forms/RequestForm";
 
 const BusinessSolutions = () => {
   return (
     <>
       <Row className="header__row align-items-center mb-4">
-        <Col sm={12}>
+        <Col sm={12} className="header__column">
           <h2 className="offerings__title">How to Choose a perfect solution</h2>
           <h2 className="offerings__title">To Your Business</h2>
         </Col>
@@ -17,6 +19,9 @@ const BusinessSolutions = () => {
         <Col md={6} className="solutions__column">
           <div className="d-flex solutions__content mb-5">
             <div className="solutions__desc ms-3 ms-md-4">
+            <div>
+            <RequestForm/>
+        </div>
               <p className="content m-0">
                 When it comes to choosing the perfect solution for your
                 business, it's essential to take a comprehensive approach that
@@ -63,3 +68,5 @@ const BusinessSolutions = () => {
 };
 
 export default BusinessSolutions;
+
+
