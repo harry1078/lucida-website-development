@@ -4,30 +4,89 @@ import { Card, Col, Container, Nav, Row, Tab } from "react-bootstrap";
 import aboutUsBanner from "../../assets/png/aboutUs_banner.png";
 import workLife from "../../assets/png/workLife.png";
 import celebrations from "../../assets/png/celebrations.png";
+import celebrations1 from "../../assets/png/celebrations1.png";
+import celebrations2 from "../../assets/png/celebrations2.png";
+import celebrations3 from "../../assets/png/celebrations3.png";
+import collaborative1 from "../../assets/png/collaborative1.png";
+import collaborative2 from "../../assets/png/collaborative2.png";
+import collaborative3 from "../../assets/png/collaborative3.png";
 import funMore from "../../assets/png/fun&More.png";
+import fun1 from "../../assets/png/fun1.png";
+import fun2 from "../../assets/png/fun2.png";
+import fun3 from "../../assets/png/fun3.png";
 import leader1 from "../../assets/png/leader1.png";
 import leader2 from "../../assets/png/leader2.png";
 import leader3 from "../../assets/png/leader3.png";
 import leader4 from "../../assets/png/leader4.png";
 import leader5 from "../../assets/png/leader5.png";
 import leader6 from "../../assets/png/leader6.png";
+import avatar1 from "../../assets/png/avatar1.png";
+import avatar2 from "../../assets/png/avatar2.png";
+import avatar3 from "../../assets/png/avatar3.png";
 import { FaGraduationCap } from "react-icons/fa6";
+import { FaQuoteLeft } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
+import { FaStarHalfAlt } from "react-icons/fa";
 import "./AboutUs.css";
+import Sliders from "../../components/Slider/slider";
+import Testimonials from "../../components/Testimonials/Testimonials";
+import Footer from "../../components/Footer/Footer";
+
+const workLife__imgData = [
+  { img: collaborative1 },
+  { img: collaborative2 },
+  { img: collaborative3 },
+  { img: collaborative1 },
+  { img: collaborative2 },
+  { img: collaborative3 },
+];
+const celebrations__imgData = [
+  { img: celebrations1 },
+  { img: celebrations2 },
+  { img: celebrations3 },
+  { img: celebrations1 },
+  { img: celebrations2 },
+  { img: celebrations3 },
+];
+const funMore__imgData = [
+  { img: fun1 },
+  { img: fun2 },
+  { img: fun3 },
+  { img: fun1 },
+  { img: fun2 },
+  { img: fun3 },
+];
 
 const AboutUs = () => {
   return (
     <>
       <Header />
-      <Container className="container-lg mt-md-3 mt-lg-5" fluid>
+      <Container className="container-lg aboutUs__container" fluid>
         <section>
-          <Row className="mt-3">
-            <Col>
+          <Row className="mt-3 banner__row">
+            <Col className="banner__column">
               <img src={aboutUsBanner} className="aboutUs__banner" alt="" />
+              <Row className="topSection__row">
+                <Col className="col-12 topSection__col d-flex">
+                  <div className="topSection__block">
+                    <p>Projects</p>
+                    <p>100+</p>
+                  </div>
+                  <div className="topSection__block">
+                    <p>Case Studies</p>
+                    <p>40+</p>
+                  </div>
+                  <div className="topSection__block">
+                    <p>Innovations</p>
+                    <p>25+</p>
+                  </div>
+                </Col>
+              </Row>
             </Col>
           </Row>
-          <Row className="my-5">
+          <div className="tabs__row">
             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-              <Row className="tab__row align-items-center mb-5">
+              <Row className="tab__row mb-5">
                 <Col className="col-12 col-sm-10 col-md-8 ">
                   <Nav variant="tabs" className="flex-row">
                     <Nav.Item>
@@ -45,7 +104,7 @@ const AboutUs = () => {
               <Row>
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
-                    <Row className="gy-5 gy-md-0">
+                    <Row className="gy-5 gy-md-0 mb-5">
                       <Col md={6} className="d-flex">
                         <div className="">
                           <h2 className="workLife__header mb-4">
@@ -70,20 +129,22 @@ const AboutUs = () => {
                       </Col>
                       <Col
                         md={6}
-                        className="order-first order-md-last text-center"
+                        className="order-first order-md-last"
                       >
                         <div className="mb-4 mb-md-5">
                           <img
                             src={workLife}
                             alt="workLife image"
-                            className="offerings1__img d-none d-md-block"
+                            className="offerings1__img"
                           />
                         </div>
                       </Col>
                     </Row>
+                      <Sliders data={workLife__imgData} />
+    
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
-                    <Row className="gy-5 gy-md-0">
+                    <Row className="gy-5 gy-md-0 mb-5">
                       <Col md={6} className="d-flex">
                         <div className="">
                           <h2 className="workLife__header mb-4">
@@ -113,14 +174,17 @@ const AboutUs = () => {
                           <img
                             src={celebrations}
                             alt="celebrations image"
-                            className="offerings1__img d-none d-md-block"
+                            className="offerings1__img"
                           />
                         </div>
                       </Col>
                     </Row>
+                    <Row>
+                      <Sliders data={celebrations__imgData} />
+                    </Row>
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
-                    <Row className="gy-5 gy-md-0">
+                    <Row className="gy-5 gy-md-0 mb-5">
                       <Col md={6} className="d-flex">
                         <div className="">
                           <h2 className="workLife__header mb-4">
@@ -151,18 +215,21 @@ const AboutUs = () => {
                           <img
                             src={funMore}
                             alt="funMore image"
-                            className="offerings1__img d-none d-md-block"
+                            className="offerings1__img"
                           />
                         </div>
                       </Col>
+                    </Row>
+                    <Row>
+                      <Sliders data={funMore__imgData} />
                     </Row>
                   </Tab.Pane>
                 </Tab.Content>
               </Row>
             </Tab.Container>
-          </Row>
+          </div>
           {/* Leadership  */}
-          <Row className="my-5">
+          <div className="team__row">
             <Row className="text-center mb-4">
               <Col className="col-12">
                 <h4 className="team__heading">Team</h4>
@@ -183,8 +250,8 @@ const AboutUs = () => {
               </Col>
             </Row>
 
-            <Row className="gy-5 my-5">
-              <Col className="col-md-4">
+            <Row className="gy-5 leadership__section">
+              <Col className="col-12 col-sm-6 col-md-4">
                 <Card className="leaders__card h-100">
                   <Row className="text-center">
                     <Col className="sm-3">
@@ -211,7 +278,7 @@ const AboutUs = () => {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col className="col-md-4">
+              <Col className="col-12 col-sm-6 col-md-4">
                 <Card className="leaders__card h-100">
                   <Row className="text-center">
                     <Col className="sm-3">
@@ -238,7 +305,7 @@ const AboutUs = () => {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col className="col-md-4">
+              <Col className="col-12 col-sm-6 col-md-4">
                 <Card className="leaders__card h-100">
                   <Row className="text-center">
                     <Col className="sm-3">
@@ -266,7 +333,7 @@ const AboutUs = () => {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col className="col-md-4">
+              <Col className="col-12 col-sm-6 col-md-4">
                 <Card className="leaders__card h-100">
                   <Row className="text-center">
                     <Col className="sm-3">
@@ -293,7 +360,7 @@ const AboutUs = () => {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col className="col-md-4">
+              <Col className="col-12 col-sm-6 col-md-4">
                 <Card className="leaders__card h-100">
                   <Row className="text-center">
                     <Col className="sm-3">
@@ -320,7 +387,7 @@ const AboutUs = () => {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col className="col-md-4">
+              <Col className="col-12 col-sm-6 col-md-4">
                 <Card className="leaders__card h-100">
                   <Row className="text-center">
                     <Col className="sm-3">
@@ -348,24 +415,14 @@ const AboutUs = () => {
                 </Card>
               </Col>
             </Row>
-          </Row>
+          </div>
 
           {/* Testimonial  */}
-          <Row className="my-5">
-            <Row className="text-center mb-4">
-              <Col className="col-12">
-                <h3 className="testimonial__heading">Testimonial</h3>
-              </Col>
-            </Row>
-
-            <Row className="mb-4">
-              <Col className="col-12 text-center testimonial__desc">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut omnis tempora corporis mollitia minima nesciunt quae molestiae dignissimos cupiditate? Velit eos quia cumque explicabo quam mollitia, officiis minus consectetur asperiores magni sequi cupiditate maxime facilis quibusdam adipisci sapiente ea nulla blanditiis iste officia. Quasi odio et labore hic ad est.
-              </Col>
-            </Row>
-          </Row>
+          <Testimonials />
         </section>
       </Container>
+      {/* Footer */}
+      <Footer />
     </>
   );
 };

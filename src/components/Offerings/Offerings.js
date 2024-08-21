@@ -9,8 +9,14 @@ import autoUI from "../../assets/png/autoUI.png";
 import epiphany from "../../assets/png/epiphany.png";
 import rightIcon from "../../assets/svgs/right-icon.svg";
 import "./Offerings.css";
+import { useNavigate } from "react-router-dom";
 
 const Offerings = () => {
+  const navigate = useNavigate()
+  const offeringsHandler =()=>{
+    navigate('/solutions')
+    window.scrollTo({top:0,left: 0, behavior:'smooth'})
+  }
   return (
     <>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
@@ -42,13 +48,13 @@ const Offerings = () => {
                           className="tag_img mb-2"
                           alt="epiphany"
                         />
-                        <div class="d-flex align-items-center mb-3">
+                        <div className="d-flex align-items-center mb-3">
                           <img
                             src={rightIcon}
                             alt="rightIcon"
-                            class="right_icon ms-2"
+                            className="right_icon ms-2"
                           />
-                          <div class="ms-3 list__item fw-bold">
+                          <div className="ms-3 list__item fw-bold">
                             LLM TEXT ANALYSIS using Gen AI
                           </div>
                         </div>
@@ -63,13 +69,13 @@ const Offerings = () => {
                           className="tag_img mb-2"
                           alt="epiphany"
                         />
-                        <div class="d-flex align-items-center mb-3">
+                        <div className="d-flex align-items-center mb-3">
                           <img
                             src={rightIcon}
                             alt="rightIcon"
-                            class="right_icon ms-2"
+                            className="right_icon ms-2"
                           />
-                          <div class="ms-3 list__item fw-bold">
+                          <div className="ms-3 list__item fw-bold">
                             IMAGE & VIDEO ANALYSIS PLATFORM using Gen AI
                           </div>
                         </div>
@@ -84,14 +90,15 @@ const Offerings = () => {
                           className="autoAi_img mb-2"
                           alt="epiphany"
                         />
-                        <div class="d-flex align-items-center mb-3">
+                        <div className="d-flex align-items-center mb-3">
                           <img
                             src={rightIcon}
                             alt="rightIcon"
-                            class="right_icon ms-2"
+                            className="right_icon ms-2"
                           />
-                          <div class="ms-3 list__item fw-bold">
-                            DESIGN.GENERATE.DEPLOY.EFFORTLESSLY
+                          <div className="ms-3 list__item fw-bold">
+                          DESIGN<span>.</span>
+                          GENERATE. DEPLOY. EFFORTLESSLY
                           </div>
                         </div>
                         <div className="ms-5 list__item1">
@@ -119,6 +126,7 @@ const Offerings = () => {
                     className="getStarted_btn px-4"
                     size="lg"
                     type="button"
+                    onClick={offeringsHandler}
                   >
                     Explore
                   </Button>
@@ -130,47 +138,47 @@ const Offerings = () => {
                 <Col md={6} className="d-flex">
                     <div className="offerings__desc">
                       <div className="d-flex flex-column ms-3 ms-lg-4 mb-4 mb-lg-0">
-                        <div class="d-flex align-items-center mb-3">
+                        <div className="d-flex align-items-center mb-3">
                           <img
                             src={rightIcon}
                             alt="rightIcon"
-                            class="right_icon ms-2"
+                            className="right_icon ms-2"
                           />
-                          <div class="ms-3 list__item">
+                          <div className="ms-3 list__item">
                             Big Data & Analytics
                           </div>
                         </div>
                       </div>
                       <div className="d-flex flex-column ms-3 ms-lg-4 mb-4 mb-lg-0">
-                        <div class="d-flex align-items-center mb-3">
+                        <div className="d-flex align-items-center mb-3">
                           <img
                             src={rightIcon}
                             alt="rightIcon"
-                            class="right_icon ms-2"
+                            className="right_icon ms-2"
                           />
-                          <div class="ms-3 list__item">
+                          <div className="ms-3 list__item">
                             Artificial Intelligence & Machine Learning{" "}
                           </div>
                         </div>
                       </div>
                       <div className="d-flex flex-column ms-3 ms-lg-4 mb-4 mb-lg-0">
-                        <div class="d-flex align-items-center mb-3">
+                        <div className="d-flex align-items-center mb-3">
                           <img
                             src={rightIcon}
                             alt="rightIcon"
-                            class="right_icon ms-2"
+                            className="right_icon ms-2"
                           />
-                          <div class="ms-3 list__item">Gen AI Solutions</div>
+                          <div className="ms-3 list__item">Gen AI Solutions</div>
                         </div>
                       </div>
                       <div className="d-flex flex-column ms-3 ms-lg-4 ">
-                        <div class="d-flex align-items-center mb-3">
+                        <div className="d-flex align-items-center mb-3">
                           <img
                             src={rightIcon}
                             alt="rightIcon"
-                            class="right_icon ms-2"
+                            className="right_icon ms-2"
                           />
-                          <div class="ms-3 list__item">Product Development</div>
+                          <div className="ms-3 list__item">Product Development</div>
                         </div>
                       </div>
                     </div>
@@ -193,6 +201,7 @@ const Offerings = () => {
                     className="getStarted_btn px-4"
                     size="lg"
                     type="button"
+                    onClick={offeringsHandler}
                   >
                     Explore
                   </Button>

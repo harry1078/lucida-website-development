@@ -1,0 +1,656 @@
+.top__row {
+    padding: 4rem 4rem 2rem;
+    background-color: #D9D9D9;
+    border-radius: 1rem;
+}
+
+.topSection__heading {
+    font-size: 24px;
+    color: #797cd0;
+    font-style: italic;
+    font-family: Mulish;
+}
+
+.topSection__heading span {
+    font-weight: 700;
+}
+
+.topSection__subtitle {
+    color: #797cd0;
+    font-size: 30px;
+    font-family: Mulish;
+
+}
+
+.careers__subtitle {
+    font-size: 26px;
+    font-family: Mulish;
+    text-align: center;
+
+}
+
+.interview__img {
+    width: 80%;
+    height: auto;
+}
+
+.careers__img {
+    width: 100%;
+    height: auto;
+}
+
+.form__control {
+    width: 80%;
+}
+
+.text__area {
+    resize: none;
+}
+
+.btn__div {}
+
+.joinUs__btn {
+    width: 100%;
+    background-color: #1A2747 !important;
+    border-color: #1A2747 !important;
+}
+
+.careers__heading {
+    text-align: center;
+    color: #797cd0;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Inter;
+}
+
+
+
+.input__group {
+    border: 1px solid #797cd0;
+    border-radius: 14px;
+}
+
+.search__box {
+    border-radius: 14px 0px 0px 14px;
+    font-family: Inter;
+}
+
+.search__btn {
+    background-color: #797cd0;
+    padding: 5px 20px;
+    border-radius: 0px 14px 14px 0px;
+}
+
+.search__btn:hover {
+    background-color: #797cd0;
+    border-color: #797cd0;
+}
+
+.search__icon {
+    font-size: 1.5rem;
+    color: #fff;
+
+}
+
+
+
+.spotlight__heading {
+    color: #797cd0;
+}
+
+.spotlight__card {
+    border: 1px solid #797cd0;
+    width: 18rem !important;
+    cursor: pointer;
+}
+
+.spotlight__card:hover {
+    opacity: 0.7;
+}
+
+.spotlight__title {
+    color: #797cd0;
+    text-align: center;
+}
+
+.modal-content {
+    padding: 1.25rem;
+    border: 2px solid #797cd0;
+}
+
+.modal-title {
+    padding-left: 1rem;
+}
+
+.modal__title {
+    font-weight: 700;
+    font-family: Inter;
+    color: #797cd0;
+}
+
+.modal__header h6 {
+    color: #00000050;
+}
+
+.modal__header .post__day {
+    color: #000000;
+    font-size: 1.25rem;
+}
+
+.modal__header .post__date {
+    color: #ff0000;
+    font-size: 1.25rem;
+}
+
+.modal__header {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.location__info {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+
+.backArrow {
+    color: #797cd0;
+    cursor: pointer;
+}
+
+.modal-header {
+    border-bottom-color: #797cd0;
+    align-items: baseline;
+    padding: 1rem 0rem;
+}
+
+.btn-close {
+    display: none;
+}
+
+.qualifications h5,
+.about__job h5,
+.responsibilities h5 {
+    color: #797cd0;
+}
+
+.qualifications ul li,
+.about__job p,
+.responsibilities ul li {
+    line-height: 2rem;
+}
+
+.desc__block {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
+}
+
+.btn__block {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.readMore__btn {
+    color: #797cd0;
+    border-color: #797cd0;
+}
+
+.apply__btn {
+    background-color: #797cd0 !important;
+    border-color: #797cd0 !important;
+}
+
+.readMore__btn:hover {
+    color: #797cd0;
+    border-color: #797cd0;
+    background-color: #fff;
+}
+
+.apply__btn:hover {
+    border-color: #797cd0;
+    background-color: #797cd0;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 575px) {
+    .top__row {
+        padding: 20px;
+    }
+
+    .topSection__heading {
+        font-size: 16px;
+    }
+
+    .topSection__subtitle {
+        font-size: 20px;
+    }
+
+    .solutions__form button {
+        display: block;
+    }
+
+    .interview__col button {
+        display: none;
+    }
+
+    .form__control {
+        width: 100%;
+    }
+
+    .careers__heading {
+        font-size: 1.25rem;
+    }
+
+    .search__box {
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+
+    .search__icon {
+        font-size: 18px;
+    }
+
+    .careers__subtitle {
+        font-size: 14px;
+        margin: 0 0 3rem 0;
+    }
+
+    .careers__desc {
+        font-size: 14px;
+        line-height: 2rem;
+    }
+
+    .careers__img {
+        width: 65%;
+        height: auto;
+    }
+
+    .spotlight__heading {
+        font-size: 20px;
+    }
+
+    .spotlight__card {
+        width: 12rem !important;
+    }
+
+    .spotlight__title {
+        font-size: 14px;
+
+    }
+
+    .modal-content {
+        padding: 0.75rem;
+    }
+
+    .modal-header {
+        padding: 10px 0px;
+    }
+
+    .location__info {
+        font-size: 14px;
+    }
+
+    .modal__title {
+        font-size: 16px;
+    }
+
+    .modal__header h6 {
+        font-size: 12px;
+    }
+
+    .modal__header .post__day {
+        font-size: 13px;
+    }
+
+    .modal__header .post__date {
+        font-size: 13px;
+    }
+
+    .qualifications h5,
+    .about__job h5,
+    .responsibilities h5 {
+        font-size: 16px;
+    }
+
+    .qualifications ul li,
+    .about__job p,
+    .responsibilities ul li {
+        font-size: 14px;
+        line-height: 1.75rem;
+    }
+
+    .btn__block button{
+        font-size: 14px;
+    }
+
+
+}
+
+@media (min-width: 576px) {
+    .top__row {
+        padding: 30px;
+    }
+
+    .topSection__heading {
+        font-size: 18px;
+    }
+
+    .topSection__subtitle {
+        font-size: 22px;
+    }
+
+    .solutions__form button {
+        display: block;
+    }
+
+    .interview__col button {
+        display: none;
+    }
+
+    .form__control {
+        width: 100%;
+    }
+
+    .careers__heading {
+        font-size: 1.5rem;
+    }
+
+    .search__box {
+        padding: 5px 12px;
+        font-size: 16px;
+    }
+
+    .search__icon {
+        font-size: 20px;
+    }
+
+    .careers__subtitle {
+        font-size: 16px;
+        margin: 0 0 3rem 0;
+    }
+
+    .careers__desc {
+        font-size: 16px;
+        line-height: 2rem;
+    }
+
+    .careers__img {
+        width: 76%;
+        height: auto;
+    }
+
+    .spotlight__heading {
+        font-size: 22px;
+    }
+
+    .spotlight__card {
+        width: 13rem !important;
+    }
+
+    .spotlight__title {
+        font-size: 16px;
+
+    }
+
+    .modal-content {
+        padding: 1rem;
+    }
+
+    .modal-header {
+        padding: 12px 0px;
+    }
+
+    .location__info {
+        font-size: 15px;
+    }
+
+    .modal__title {
+        font-size: 18px;
+    }
+
+    .modal__header h6 {
+        font-size: 14px;
+    }
+
+    .modal__header .post__day {
+        font-size: 15px;
+    }
+
+    .modal__header .post__date {
+        font-size: 15px;
+    }
+
+    .qualifications h5,
+    .about__job h5,
+    .responsibilities h5 {
+        font-size: 17px;
+    }
+
+    .qualifications ul li,
+    .about__job p,
+    .responsibilities ul li {
+        font-size: 15px;
+        line-height: 1.75rem;
+    }
+
+    .btn__block button{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .top__row {
+        padding: 40px;
+    }
+
+    .topSection__heading {
+        font-size: 20px;
+    }
+
+    .topSection__subtitle {
+        font-size: 24px;
+    }
+
+    .form__control {
+        width: 80%;
+    }
+
+    .careers__heading {
+        font-size: 1.7rem;
+    }
+
+    .search__box {
+        padding: 5px 12px;
+        font-size: 17px;
+    }
+
+    .search__icon {
+        font-size: 22px;
+    }
+
+    .careers__subtitle {
+        font-size: 18px;
+    }
+
+    .careers__desc {
+        font-size: 18px;
+        line-height: 2rem;
+    }
+
+    .careers__img {
+        width: 85%;
+    }
+
+    .solutions__form button {
+        display: none;
+    }
+
+    .interview__col button {
+        display: block;
+    }
+
+    .spotlight__heading {
+        font-size: 24px;
+    }
+
+    .spotlight__card {
+        width: 12rem !important;
+    }
+
+    .spotlight__title {
+        font-size: 17px;
+
+    }
+
+    .modal-content {
+        padding: 1.2rem;
+    }
+
+    .modal-header {
+        padding: 14px 0px;
+    }
+
+    .location__info {
+        font-size: 16px;
+    }
+
+    .modal__title {
+        font-size: 19px;
+    }
+
+    .modal__header h6 {
+        font-size: 15px;
+    }
+
+    .modal__header .post__day {
+        font-size: 16px;
+    }
+
+    .modal__header .post__date {
+        font-size: 16px;
+    }
+
+    .qualifications h5,
+    .about__job h5,
+    .responsibilities h5 {
+        font-size: 18px;
+    }
+
+    .qualifications ul li,
+    .about__job p,
+    .responsibilities ul li {
+        font-size: 16px;
+        line-height: 1.75rem;
+    }
+
+    .btn__block button{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .top__row {
+        padding: 4rem 4rem 2rem;
+    }
+
+    .topSection__heading {
+        font-size: 24px;
+    }
+
+    .topSection__subtitle {
+        font-size: 30px;
+    }
+
+    .careers__subtitle {
+        font-size: 26px;
+    }
+
+    .interview__img {
+        width: 80%;
+    }
+
+    .careers__img {
+        width: 100%;
+    }
+
+    .careers__heading {
+        font-size: 2rem;
+    }
+
+    .careers__desc {
+        font-size: 22px;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    .search__icon {
+        font-size: 1.5rem;
+    }
+
+    .spotlight__heading {
+        font-size: 24px;
+    }
+
+    .spotlight__card {
+        width: 18rem !important;
+    }
+
+    .spotlight__title {
+        font-size: 18px;
+
+    }
+
+    .modal-content {
+        padding: 1.25rem;
+    }
+
+    .modal-header {
+        padding: 1rem 0rem;
+    }
+
+    .location__info {
+        font-size: 18px;
+    }
+
+    .modal__title {
+        font-size: 22px;
+    }
+
+    .modal__header h6 {
+        font-size: 1rem;
+    }
+
+    .modal__header .post__day {
+        font-size: 1.25rem;
+    }
+
+    .modal__header .post__date {
+        font-size: 1.25rem;
+    }
+
+    .qualifications h5,
+    .about__job h5,
+    .responsibilities h5 {
+        font-size: 1.25rem;
+    }
+
+    .qualifications ul li,
+    .about__job p,
+    .responsibilities ul li {
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+
+    .btn__block button{
+        font-size: 1rem;
+    }
+
+}

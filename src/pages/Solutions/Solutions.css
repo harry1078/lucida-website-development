@@ -1,0 +1,220 @@
+.epiphiny1__img, .bigData1__img{
+    width: 100%;
+    height: auto;
+}
+
+.number{
+    font-size: 80px;
+    color: #797cd0;
+    font-family: Mulish; 
+    font-weight: bold;
+    -webkit-text-stroke: 2px #797cd0;
+    -webkit-text-fill-color: transparent;
+}
+
+.epiphany__title {
+    font-size: 28px;
+    color: #797cd0;
+    font-style: italic;
+    font-family: Mulish; 
+    padding-left: 5rem;
+}
+
+.epiphany__subtitle {
+    font-size: 26px;
+    line-height: 3rem;
+    letter-spacing: 0.03rem;
+    padding-left: 5rem;
+}
+
+.epiphany__desc{
+    font-size: 24px;
+    line-height: 3rem;
+    letter-spacing: 0.03rem;
+    padding-left: 5rem;
+}
+
+.analytics__title {
+    font-size: 2.5rem;
+    color: #797cd0;
+    font-family: Mulish; 
+    font-weight: bold;
+}
+
+.analytics__subtitle {
+    font-size: 24px;
+    padding-left: 5rem;
+    line-height: 3rem;
+    letter-spacing: 0.03rem;
+
+}
+@media only screen and (max-width: 575px) {
+    .number{
+        font-size: 36px;  
+    }
+    .section__img{
+        width: 150px;
+    }
+    .epiphany__col2, .analytics_col2{
+        text-align: center;
+    }
+
+    .epiphiny1__img, .bigData1__img{
+        width: 80%;
+    }
+    
+    .epiphany__title {
+        font-size: 16px;
+        line-height: 2rem;
+        padding: 0;
+    }
+    
+    .epiphany__subtitle {
+        font-size: 14px;
+        line-height: 2rem;
+        padding: 0;
+    }
+    
+    .epiphany__desc{
+        font-size: 13px;
+        line-height: 2rem;
+        padding: 0;
+    }
+    
+    .analytics__title {
+        font-size: 1.5rem;
+    }
+    
+    .analytics__subtitle {
+        font-size: 14px;
+        line-height: 2rem;
+        padding: 0;
+    }
+
+    #autoUI{
+       width: 195px; 
+    }
+    .details {
+        margin: 0 0 6rem 0;
+     }
+}
+    @media (min-width: 576px){
+        .number{
+            font-size: 48px;  
+        }
+        .section__img{
+            width: 178px;
+        }
+        .epiphany__col2, .analytics_col2{
+            text-align: center;
+        }
+    
+        .epiphiny1__img, .bigData1__img{
+            width: 85%;
+        }
+        
+        .epiphany__title {
+            font-size: 18px;
+            line-height: 2rem;
+            padding: 0 0 0 3rem;
+        }
+        
+        .epiphany__subtitle {
+            font-size: 16px;
+            line-height: 2rem;
+            padding: 0 0 0 3rem;
+        }
+        
+        .epiphany__desc{
+            font-size: 15px;
+            line-height: 2rem;
+            padding: 0 0 0 3rem;
+        }
+        
+        .analytics__title {
+            font-size: 1.7rem;
+        }
+        
+        .analytics__subtitle {
+            font-size: 16px;
+            line-height: 2rem;
+            padding: 0 0 0 3rem;
+        }
+        #autoUI{
+            width: 235px; 
+         }
+
+         .details {
+            margin: 0 0 8rem 0;
+         }
+    }
+    @media (min-width: 768px){
+        .number{
+            font-size: 56px;  
+        }
+        .section__img{
+            width: 274px;
+        }
+        .epiphany__col2, .analytics_col2{
+            text-align: center;
+        }
+    
+        .epiphiny1__img, .bigData1__img{
+            width: 100%;
+        }
+        
+        .epiphany__title {
+            font-size: 20px;
+        }
+        
+        .epiphany__subtitle {
+            font-size: 18px;
+        }
+        
+        .epiphany__desc{
+            font-size: 18px;
+            line-height: 2rem;
+            padding: 0 0 0 3rem;
+        }
+        
+        .analytics__title {
+            font-size: 1.8rem;
+        }
+        
+        .analytics__subtitle {
+            font-size: 18px;
+        }
+        #autoUI{
+            width: 268px; 
+         }
+    }
+    @media (min-width: 992px){
+        .number{
+            font-size: 80px;  
+        }
+
+        #autoUI{
+            width: 312px; 
+         }
+        
+        .epiphany__title {
+            font-size: 28px;
+        }
+        
+        .epiphany__subtitle {
+            font-size: 22px;
+        }
+        
+        .epiphany__desc{
+            font-size: 20px;
+        }
+        
+        .analytics__title {
+            font-size: 2.5rem;
+           
+        }
+        
+        .analytics__subtitle {
+            font-size: 24px;
+        }
+    }

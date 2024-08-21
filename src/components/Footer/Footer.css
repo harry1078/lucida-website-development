@@ -1,0 +1,291 @@
+.footer__section *{
+    font-family: Mulish;
+}
+
+.lucida_logo{
+    width: 172px;
+}
+
+.footer__header{
+    font-size: 26px;
+    text-transform: uppercase;
+    line-height: 30px;
+    color: #505050;
+    font-weight: 700;
+}
+
+.footer__section {
+    margin-top: 5rem;
+}
+
+.footer__row{
+    justify-content: space-between;
+    padding: 1rem 1rem 3rem 1rem;
+}
+
+.company__ul, .footer_nav{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-wrap: nowrap;
+}
+
+.bottom__nav li:hover{
+    color: #797cd0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.social-icons, .footer_nav li {
+    display: inline-block;
+}
+.social-icons li {
+    display: inline-block;
+    margin: 0rem 1rem 1rem 0rem;
+}
+
+.icon__box{
+    font-size: 1.4rem;
+    width: 36px;
+    height: 36px;
+    color: #505050;
+    line-height: 36px;
+    text-align: center;
+    display: block;
+}
+
+.social-icons li .icon__box:hover a{
+    color: #fff;
+}
+.social-icons li .icon__box a{
+    color: #505050;
+}
+
+.social-icons .icon__box:hover {
+    transition: .3s ease-in-out;
+}
+.social-icons li .icon__box.fb:hover{
+    background-color:#1877F2;
+    border-radius: 4px;
+}
+.social-icons li .icon__box.twt:hover{
+    background-color: #1DA1F2 ;
+    border-radius: 4px;
+}
+.social-icons li .icon__box.linkedIn:hover{
+    background-color: #0077B5 ;
+    border-radius: 4px;
+}
+
+.copyright-section {
+    padding: 15px 0;
+    font-size: 11px;
+    letter-spacing: .5px;
+    border-top: 1px solid #505050;
+}
+
+.copyright-section p {
+    font-size: 13px;
+    margin: 10px 0;
+    font-weight: 400;
+    float: left;
+    text-indent: 10px;
+    text-transform: uppercase;
+}
+
+ul.footer_nav {
+    float: right;
+    text-transform: uppercase;
+}
+
+.copyright-section ul li {
+    font-size: 13px;
+    margin: 10px;
+    font-weight: 400;
+}
+
+.footer_nav a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+.address__col p {
+    line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 575px) {
+    .lucida_logo 
+    {
+        width: 132px;
+    }
+
+    .footer__row {
+        flex-direction: column;
+        row-gap: 2.5rem;
+    }
+
+    .footer__header {
+        font-size: 16px;
+    }
+
+    .company__ul p{
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+
+
+    .social-icons li {
+        margin: 0rem 8px 8px 0rem;
+    }
+
+    .icon__box{
+        font-size: 16px;
+    }
+
+    .address__col p{
+        font-size: 14px;
+        line-height: 1.2rem;
+    }
+    .copyright__row{
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    .copyright__row p{
+        padding: 0;
+    }
+    
+
+    ul.footer_nav {
+        float:none;
+    }
+    .copyright-section p{
+        float: none;
+    }
+    .copyright-section p, .copyright-section ul li {
+        font-size: 10px;
+    }
+}
+    @media (min-width: 576px){
+
+        .lucida_logo 
+    {
+        width: 148px;
+    }
+
+    .footer__row {
+        flex-direction: row;
+    }
+
+    .footer__header {
+        font-size: 18px;
+    }
+
+    .company__ul p{
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+
+    .social-icons li {
+        margin: 0rem 8px 8px 0rem;
+    }
+
+    .icon__box{
+        font-size: 18px;
+    }
+
+    .address__col p{
+        font-size: 14px;
+        line-height: 1.3rem;
+    }
+
+    .copyright__row {
+        text-align: center;
+    }
+
+    .copyright__row p{
+        padding: 0;
+    }
+    
+    ul.footer_nav {
+        float:none;
+    }
+    .copyright-section p{
+        float: none;
+    }
+    .copyright-section p, .copyright-section ul li {
+        font-size: 10px;
+    }
+    }
+
+    @media (min-width: 768px){
+
+        .lucida_logo 
+    {
+        width: 157px;
+    }
+
+    .footer__header {
+        font-size: 20px;
+    }
+
+    .company__ul p{
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+
+    .social-icons li {
+        margin: 0rem 10px 10px 0rem;
+    }
+
+    .icon__box{
+        font-size: 20px;
+    }
+
+    .address__col p{
+        font-size: 15px;
+        line-height: 1.3rem;
+    }
+    .copyright-section p, .copyright-section ul li {
+        font-size: 12px;
+    }
+}
+    @media (min-width: 992px){
+
+        .lucida_logo 
+    {
+        width: 162px;
+    }
+
+    .footer__header {
+        font-size: 22px;
+    }
+
+    .company__ul p{
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .social-icons li {
+        margin: 0rem 12px 12px 0rem;
+    }
+
+    .icon__box{
+        font-size: 22px;
+    }
+
+    .address__col p{
+        font-size: 16px;
+        line-height: 1.3rem;
+    }
+    ul.footer_nav {
+        float:right;
+    }
+    .copyright-section p{
+        float: left;
+    }
+    
+    }

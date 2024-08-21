@@ -1,18 +1,59 @@
-.aboutUs__banner,.leadership__img {
+.aboutUs__banner,
+.leadership__img {
   width: 100%;
   height: auto;
 }
 
-.tab__row {
-  justify-content: center;
+.topSection__block {
+  background-color: #797cd0;
+  color: #fff;
+  padding: 1.5rem 3rem;
+  border-radius: 1.5rem;
+}
+
+.banner__row {
+  margin-bottom: 10rem;
+}
+
+.banner__column {
+  position: relative;
+}
+.tabs__row,
+.team__row,
+.leadership__section,
+.testimonials__section {
+  margin: 0rem 0rem 8rem 0rem;
+}
+
+.topSection__block p {
+  text-align: center;
+  font-size: 22px;
+  font-family: Mulish;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.topSection__block p:nth-child(2) {
+  font-size: 40px;
+  font-family: Mulish;
+  margin: 0;
+}
+
+.topSection__col {
+  justify-content: space-evenly;
+}
+.topSection__row {
+  position: absolute;
+  top: 85%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .workLife__header,
 .rewards__text,
 .team__heading,
 .leadership__heading,
-.leaders__name
- {
+.leaders__name {
   color: #797cd0;
   font-family: Mulish;
 }
@@ -21,9 +62,6 @@
   font-weight: 700;
 }
 
-.workLife__header {
-  font-size: 2.5rem;
-}
 .rewards__text {
   font-size: 2rem;
   font-style: italic;
@@ -39,54 +77,359 @@
 }
 
 .leadership__desc {
-    font-size: 20px;
+  font-size: 20px;
   font-style: italic;
   color: #050505;
 }
 
-.leaders__card{
-    box-shadow: -1.5px -1.5px 4.49px rgba(0, 0, 0, 0.25),
+.leaders__card {
+  box-shadow: -1.5px -1.5px 4.49px rgba(0, 0, 0, 0.25),
     1.5px 1.5px 4.49px rgba(0, 0, 0, 0.25);
-    border-radius: 14px;
-    text-transform: uppercase;
+  border-radius: 14px;
+  text-transform: uppercase;
 }
-.leadership__img{
-    background-color: #797cd0;
+.leadership__img {
+  background-color: #797cd0;
+  padding: 48px 12px 16px;
+  width: 42%;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+}
+
+.leaders__name {
+  text-align: center;
+  font-weight: bold;
+}
+.leaders__role {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-wrap: wrap;
+}
+.graduationCap__icon {
+  color: #797cd0;
+  font-size: 20px;
+}
+
+.leaders__desc {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: auto;
+}
+
+/* testimonials  */
+.testimonials * {
+  font-family: Mulish;
+}
+
+.testimonial__heading {
+  color: #797cd0;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+
+.quote {
+  font-size: 2.5rem;
+  color: #797cd0;
+}
+.testimonial__card {
+  width: 18rem !important;
+  border: none;
+}
+
+.testimonial__content ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.testimonial__content ul li {
+  color: #e5a11d;
+}
+
+.testimonial__content > div > p {
+  font-size: 18px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+}
+
+.avatar img {
+  width: 68px;
+}
+
+.avatar p:nth-child(2) {
+  margin: 0;
+}
+.avatar p {
+  font-size: 16px;
+}
+
+.avatar__title {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 575px) {
+  .topSection__block {
+    padding: 0.8rem 1.2rem;
+  }
+  .topSection__block p {
+    font-size: 14px;
+  }
+  .topSection__block p:nth-child(2) {
+    font-size: 18px;
+  }
+  .rewards__text {
+    font-size: 1rem;
+  }
+
+  .workLife__desc {
+    font-size: 14px;
+  }
+
+  .leadership__heading {
+    font-size: 1.25rem;
+  }
+
+  .leadership__desc {
+    font-size: 14px;
+  }
+
+  .leadership__img {
+    padding: 44px 8px 9px;
+    width: 24%;
+  }
+  .leaders__name {
+    font-size: 16px;
+  }
+  .leaders__role {
+    font-size: 15px;
+  }
+  .leaders__desc {
+    font-size: 14px;
+  }
+
+  .testimonial__heading {
+    font-size: 1.25rem;
+  }
+  .testimonial__desc {
+    font-size: 14px;
+  }
+  .quote {
+    font-size: 1.2rem;
+  }
+
+  .testimonial__content > div > p {
+    font-size: 14px;
+}
+
+.testimonial__content ul li {
+  font-size: 12px;
+}
+.avatar img {
+  width: 46px;
+}
+.avatar p {
+  font-size: 14px;
+}
+
+}
+@media (min-width: 576px) {
+  .topSection__block {
+    padding: 1rem 2rem;
+  }
+  .topSection__block p {
+    font-size: 16px;
+  }
+  .topSection__block p:nth-child(2) {
+    font-size: 24px;
+  }
+  .rewards__text {
+    font-size: 1rem;
+  }
+  .tab__row {
+    justify-content: center;
+  }
+  .workLife__desc {
+    font-size: 14px;
+  }
+  .team__heading {
+    font-size: 1.3rem;
+  }
+  .leadership__heading {
+    font-size: 1.4rem;
+  }
+  .leadership__desc {
+    font-size: 1rem;
+  }
+  .team__heading {
+    font-size: 1.2rem;
+  }
+  .leadership__img {
+    padding: 44px 8px 9px;
+    width: 32%;
+  }
+  .leaders__name {
+    font-size: 17px;
+  }
+  .leaders__role {
+    font-size: 16px;
+  }
+  .leaders__desc {
+    font-size: 15px;
+  }
+  .testimonial__heading {
+    font-size: 1.5rem;
+  }
+  .testimonial__desc {
+    font-size: 15px;
+  }
+  .quote {
+    font-size: 1.4rem;
+  }
+
+  .testimonial__content > div > p {
+    font-size: 15px;
+}
+
+.testimonial__content ul li {
+  font-size: 14px;
+}
+.avatar img {
+  width: 52px;
+}
+.avatar p {
+  font-size: 15px;
+}
+}
+@media (min-width: 768px) {
+  .topSection__block {
+    padding: 1.2rem 2.5rem;
+  }
+  .topSection__block p {
+    font-size: 18px;
+  }
+  .topSection__block p:nth-child(2) {
+    font-size: 32px;
+  }
+
+  .rewards__text {
+    font-size: 1.2rem;
+  }
+  .workLife__desc{
+    font-size: 16px;
+  }
+
+  .leadership__img {
+    padding: 45px 10px 12px;
+    width: 34%;
+  }
+  .leaders__name {
+    font-size: 17px;
+  }
+  .leaders__role {
+    font-size: 16px;
+  }
+  .leaders__desc {
+    font-size: 15px;
+  }
+
+  .testimonial__heading {
+    font-size: 1.6rem;
+  }
+  .testimonial__desc {
+    font-size: 16px;
+  }
+  .quote {
+    font-size: 1.4rem;
+  }
+
+  .testimonial__content > div > p {
+    font-size: 15px;
+}
+
+.testimonial__content ul li {
+  font-size: 14px;
+}
+.avatar img {
+  width: 56px;
+}
+.avatar p {
+  font-size: 15px;
+}
+}
+@media (min-width: 992px) {
+  .topSection__block {
+    padding: 1.5rem 3rem;
+  }
+  .topSection__block p {
+    font-size: 22px;
+  }
+  .topSection__block p:nth-child(2) {
+    font-size: 40px;
+  }
+  .workLife__header {
+    font-size: 2.5rem;
+  }
+  .rewards__text {
+    font-size: 1.5rem;
+  }
+  .workLife__desc{
+    font-size: 18px;
+  }
+
+  .team__heading {
+    font-size: 1.5rem;
+  }
+  .leadership__heading {
+    font-size: 1.6rem;
+  }
+
+  .leadership__desc {
+    font-size: 1.25rem;
+  }
+  .leadership__img {
     padding: 48px 12px 16px;
     width: 42%;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 30%;
-    border-bottom-right-radius: 30%;
-}
-
-.leaders__name{
-    text-align: center;
-    font-weight: bold;
-}
-.leaders__role{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    text-wrap: wrap;
-}
-.graduationCap__icon
-{
-    color: #797cd0;
+  }
+  .leaders__name {
     font-size: 20px;
-}
+  }
+  .leaders__role {
+    font-size: 20px;
+  }
+  .leaders__desc {
+    font-size: 16px;
+  }
 
-.leaders__desc{
-    font-size: 14px;
-    font-style: italic;
-    margin-top: auto;
-}
-
-.testimonial__heading{
-    color: #797cd0;
+  .testimonial__heading {
     font-size: 2.2rem;
-}
+  }
+  
+  .testimonial__desc {
+    font-size: 1.2rem;
+  }
 
-.testimonial__desc {
-    font-size: 1.5rem;
+  .quote {
+    font-size: 2.5rem;
+  }
+
+  .testimonial__content > div > p {
+    font-size: 18px;
+  }
+
+.testimonial__content ul li {
+  font-size: 16px;
+}
+.avatar img {
+  width: 68px;
+}
+.avatar p {
+  font-size: 16px;
+}
 }

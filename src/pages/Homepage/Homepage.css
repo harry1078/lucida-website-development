@@ -1,363 +1,501 @@
-.column2nd{
-    text-align: end;
-}
-.column2nd img{
-    width: 100%;
-    height: auto;
+
+.homepage__container,
+  .aboutUs__container,
+  .solutions__container,
+  .resources__container,
+  .contact__container{
+  margin-top: 9rem;
 }
 
-.digital__transformation{
-    color: #797CD0;
+
+
+.hero__section,
+.service__section,
+.business__section,
+.offerings__section,
+.caseStudy__section,
+.solutions__section,
+.partners__section
+    {
+  margin: 0px 0 8rem 0rem;
+}
+
+.column2nd {
+  text-align: end;
+}
+.column2nd img {
+  width: 100%;
+  height: auto;
+}
+
+.digital__transformation {
+  color: #797cd0;
 }
 
 .vertical_line {
-    width: 2rem;
-    background-color: #797CD0;
-    height: auto;
+  width: 2rem;
+  background-color: #797cd0;
+  height: auto;
 }
 
 .digital__content {
-    border-left: 4px solid #797CD0;
+  border-left: 4px solid #797cd0;
 }
-
 
 .description .content {
-    font-size: 18px;
-    line-height: 36px;
+  font-size: 18px;
+  line-height: 36px;
 }
 
-.getStarted_btn{
-    background-color: #797CD0 !important;
-    border-color: #797CD0;
-    font-weight: 500;
+.getStarted_btn {
+  background-color: #797cd0 !important;
+  border-color: #797cd0;
+  font-weight: 500;
 }
 
-.getStarted_btn:hover{
-    background-color: #797CD0;
-    border-color: #797CD0;
-    color: #fff;
+.getStarted_btn:hover {
+  background-color: #797cd0;
+  border-color: #797cd0;
+  color: #fff;
 }
 
 /* services */
 .service__text {
-    font-weight: 500;
+  font-weight: 500;
 }
 
-.service__section, .solutions__section {
-    margin: 5rem 0rem;
-}
-
-.service__section .title{
-    font-size: 2.019rem;
-    color: #797cd0;
-    font-family: Inter; 
-    font-weight: 600;
+.service__section .title {
+  font-size: 2.019rem;
+  color: #797cd0;
+  font-family: Inter;
+  font-weight: 600;
 }
 
 .see_all {
-    font-size: 1.25rem;
-    color: #797cd0;
-    font-family: Inter; 
+  font-size: 1.25rem;
+  color: #797cd0;
+  font-family: Inter;
+  cursor: pointer;
 }
 
 .cards {
-    border-top: 10px solid #797cd0;
-    box-shadow: 0 8.1px 4.04px rgba(121, 124, 208, 0.5);
-    border-radius: 12.11px;
+  border-top: 10px solid #797cd0;
+  box-shadow: 0 8.1px 4.04px rgba(121, 124, 208, 0.5);
+  border-radius: 12.11px;
 }
 
 .card_title {
-    text-align: center;
-    color: #797cd0;
+  text-align: center;
+  color: #797cd0;
 }
 
-.horizontal_line{
-    width: 5rem;
-    border-top: 3px solid #797cd0;
+.horizontal_line {
+  width: 5rem;
+  border-top: 3px solid #797cd0;
 }
 
 .desc {
-    letter-spacing: 1px;
-    font-size: 14px ;
-    font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .read_more {
-    font-size: 1rem;
-    color: #797cd0;
-    font-weight: 600;
-    cursor: pointer;
+  font-size: 1rem;
+  color: #797cd0;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 /* Business & Solution */
 
-.business__section {
-    margin: 7rem 0rem;
-}
-.business__section .title{
-    font-size: 2.019rem;
-    color: #797cd0;
-    font-family: Inter; 
-    font-weight: 600;
+.business__section .title {
+  font-size: 2.019rem;
+  color: #797cd0;
+  font-family: Inter;
+  font-weight: 600;
 }
 
 .vision_text {
-    font-size: 1.388rem;
-    color: rgba(5, 5, 5, 0.5);
-    font-family: Inter;
-    font-weight: 600;
-    line-height: 2.523rem;
-    letter-spacing: 0.02em;
+  font-size: 1.388rem;
+  color: rgba(5, 5, 5, 0.5);
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 2.523rem;
+  letter-spacing: 0.02em;
 }
 
-.business_img{
-    width: 100%;
+.business_img {
+  width: 100%;
 }
-
 
 /* Case Study */
 
-.caseStudy__section {
-    margin: 5rem 0rem
-}
-
 .caseStudy__header {
-    font-size: 2.019rem;
-    color: #797cd0;
-    font-family: Mulish; 
-    font-weight: bolder;
-    text-align: center;
+  font-size: 2.019rem;
+  color: #797cd0;
+  font-family: Mulish;
+  font-weight: bolder;
+  text-align: center;
 }
 
 .card_layout {
-    border-radius: 0;
-    border: 1px solid #797cd0;
-    text-align: center;
+  border-radius: 0;
+  border: 1px solid #797cd0;
+  text-align: center;
 }
 
-.caseStudy__title{
-    font-size: 2.269rem;
-    color: #797cd0;
-    font-family: Mulish;
-    font-weight: 600;
+.caseStudy__title {
+  font-size: 2.269rem;
+  color: #797cd0;
+  font-family: Mulish;
+  font-weight: 600;
 }
 
-#traffic__title{
-    font-size: 1.7rem;
+#traffic__title {
+  font-size: 1.7rem;
 }
 
 .caseStudy__description {
-    font-size: 1.169rem;
-    color: rgba(5, 5, 5, 0.7);
+  font-size: 1.169rem;
+  color: rgba(5, 5, 5, 0.7);
 }
-
 
 /* Offerings & Services  */
 
-.offerings__section {
-    margin: 5rem 0;
+/* partners  */
+
+.partners__header {
+  color: #797cd0;
+  text-align: center;
 }
+.partners__row {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 @media only screen and (max-width: 575px) {
-    .vertical_line {
-        width: 0.8rem;
-    }
-    .getStarted_btn{
-        width: 100%;
-        font-size:14px;
-    }
-    .col2{
-        order: 1;
-    }
-    .top_header {
-     font-size: 1.5rem;
-    }
-    .description .content {
-        font-size: 14px;
-        line-height: 24px;
-    }
-    .service__text{
-        font-size: 16px;
-    }
-    .service__section .title {
-        font-size: 20px;
-    }
-    .business__section .title {
-        font-size: 20px;
-    }
-    .see_all {
-        font-size: 12px;
-        text-wrap: nowrap ;
-    }
-    .service__section .headerDiv{
-        gap : 2rem;
-    }
 
-    .top_icon{
-        height: 68px;
-    }
-
-    .card_title{
-        font-size: 18px;
-    }
-
-    .right_icon{
-        width: 1.25rem;
-    }
-
-    .card_col{
-        padding: 0px 48px;
-    }
-
-    .read_more{
-        font-size: 13px;
-    }
-    .card_icon{
-        height: 48px;
-    }
-
-    .vision_text{
-        font-size: 14px;
-        line-height: 1.5rem;
-    }
-    .business_img{
-        height: auto;
-    }
-
-    .caseStudy__grid {
-        display: flex;
-        flex-direction: column;
-    }
+  .homepage__container,
+  .aboutUs__container,
+  .solutions__container,
+  .resources__container,
+  .contact__container{
+    margin-top: 6rem;
+  }
+  .vertical_line {
+    width: 0.8rem;
+  }
+  .getStarted_btn {
+    width: 100%;
+    font-size: 14px;
+  }
+  .col2 {
+    order: 1;
+  }
+  .top_header {
+    font-size: 1.5rem;
+  }
+  .description .content {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .service__text {
+    font-size: 16px;
+  }
+  .service__section .title {
+    font-size: 20px;
+  }
+  .business__section .title {
+    font-size: 20px;
+  }
+  .see_all {
+    font-size: 12px;
+    text-wrap: nowrap;
+  }
+  .service__section .headerDiv {
+    gap: 2rem;
   }
 
+  .top_icon {
+    height: 68px;
+  }
+
+  .card_title {
+    font-size: 18px;
+  }
+
+  .right_icon {
+    width: 1.25rem;
+  }
+
+  .card_col {
+    padding: 0px 48px;
+  }
+
+  .read_more {
+    font-size: 13px;
+  }
+  .card_icon {
+    height: 48px;
+  }
+
+  .vision_text {
+    font-size: 14px;
+    line-height: 1.5rem;
+  }
+  .business_img {
+    height: auto;
+  }
+
+  .caseStudy__grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .caseStudy__header {
+    font-size: 2.019rem;
+  }
+  .caseStudy__header {
+    font-size: 1.4rem;
+  }
+
+  .partners__row {
+    flex-direction: column;
+    row-gap: 1.2rem;
+  }
+
+  .partners__row img:nth-child(1) {
+    width: 145px;
+  }
+  .partners__row img:nth-child(2) {
+    width: 250px;
+  }
+  .partners__row img:nth-child(3) {
+    width: 147px;
+  }
+
+  .caseStudy__title {
+    font-size: 1.2rem;
+  }
+
+  #traffic__title {
+    font-size: 1rem;
+  }
+
+  .caseStudy__description {
+    font-size: 14px;
+  }
+}
+
 @media (min-width: 576px) {
-    .vertical_line {
-        width: 1rem;
-    }
-    .top_header {
-     font-size: 1.8rem;
-    }
-    .getStarted_btn{
-        font-size: 1rem;
-    }
+  .homepage__container,
+  .aboutUs__container,
+  .solutions__container,
+  .resources__container,
+  .contact__container{
+    margin-top: 6rem;
+  }
+  .vertical_line {
+    width: 1rem;
+  }
+  .top_header {
+    font-size: 1.8rem;
+  }
+  .getStarted_btn {
+    font-size: 1rem;
+  }
 
-    .description .content {
-        font-size: 16px;
-        line-height: 30px;
-    }
-    .service__text{
-        font-size: 18px;
-    }
-    .service__section .title {
-        font-size: 22px;
-    }
-    .business__section .title {
-        font-size: 22px;
-    }
+  .description .content {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .service__text {
+    font-size: 18px;
+  }
+  .service__section .title {
+    font-size: 22px;
+  }
+  .business__section .title {
+    font-size: 22px;
+  }
 
-    .see_all {
-        font-size: 14px;
-    }
+  .see_all {
+    font-size: 14px;
+  }
 
-    .top_icon{
-        height: 76px;
-    }
+  .top_icon {
+    height: 76px;
+  }
 
-    .read_more{
-        font-size: 14px;
-    }
-    .card_icon{
-        height: 62px;
-    }
-    .vision_text{
-        font-size: 16px;
-    }
+  .read_more {
+    font-size: 14px;
+  }
+  .card_icon {
+    height: 62px;
+  }
+  .vision_text {
+    font-size: 16px;
+  }
 
-    .caseStudy__grid {
-        display: flex;
-        flex-direction: row;
-    }
+  .caseStudy__grid {
+    display: flex;
+    flex-direction: row;
+  }
 
+  .caseStudy__header {
+    font-size: 1.5rem;
+  }
+
+  .partners__row {
+    flex-direction: row;
+  }
+
+  .partners__row img:nth-child(1) {
+    width: 164px;
+  }
+  .partners__row img:nth-child(2) {
+    width: 278px;
+  }
+  .partners__row img:nth-child(3) {
+    width: 152px;
+  }
+
+  .caseStudy__title {
+    font-size: 1.3rem;
+  }
+
+  #traffic__title {
+    font-size: 1.2rem;
+  }
+
+  .caseStudy__description {
+    font-size: 1rem;
+  }
 }
 @media (min-width: 768px) {
-    
-    .top_header {
-     font-size: 2rem;
-    }
+  .top_header {
+    font-size: 2rem;
+  }
 
-    .description .content {
-        font-size: 17px;
-        line-height: 32px;
-    }
+  .description .content {
+    font-size: 17px;
+    line-height: 32px;
+  }
 
-    .service__text{
-        font-size: 20px;
-    }
+  .service__text {
+    font-size: 20px;
+  }
 
-    .service__section .title {
-        font-size: 28px;
-    }
-    .business__section .title {
-        font-size: 28px;
-    }
-    .top_icon{
-        height: 78px;
-    }
-    .cards{
-        margin: 0 ;
-    }
+  .service__section .title {
+    font-size: 28px;
+  }
+  .business__section .title {
+    font-size: 28px;
+  }
+  .top_icon {
+    height: 78px;
+  }
+  .cards {
+    margin: 0;
+  }
 
-    .card_icon{
-        height: 68px;
-    }
-    .vision_text{
-        font-size: 18px;
-    }
+  .card_icon {
+    height: 68px;
+  }
+  .vision_text {
+    font-size: 18px;
+  }
 
-    .caseStudy__grid {
-        display: flex;
-        flex-direction: row;
-    }
+  .caseStudy__grid {
+    display: flex;
+    flex-direction: row;
+  }
+  .caseStudy__header {
+    font-size: 1.8rem;
+  }
 
-    
+  .caseStudy__title {
+    font-size: 1.5rem;
+  }
+
+  #traffic__title {
+    font-size: 1.3rem;
+  }
+
+  .caseStudy__description {
+    font-size: 1.2rem;
+  }
+
+  .partners__row img:nth-child(1) {
+    width: 172px;
+  }
+  .partners__row img:nth-child(2) {
+    width: 287px;
+  }
+  .partners__row img:nth-child(3) {
+    width: 164px;
+  }
 }
 @media (min-width: 992px) {
-   .col2{
+  .homepage__container,
+  .aboutUs__container,
+  .solutions__container,
+  .resources__container,
+  .contact__container
+  {
+    margin-top: 9rem;
+  }
+  .col2 {
     order: 2;
-   }
-   .top_header {
+  }
+  .top_header {
     font-size: 2.5rem;
-   }
-   .description .content {
+  }
+  .description .content {
     font-size: 20px;
     line-height: 36px;
-}
-.getStarted_btn{
+  }
+  .getStarted_btn {
     font-size: 1.2rem;
-}
+  }
 
-.right_icon{
+  .right_icon {
     width: 1.5rem;
-}
+  }
 
-.service__section .title {
+  .service__section .title {
     font-size: 2rem;
-}
-.business__section .title {
+  }
+  .business__section .title {
     font-size: 2rem;
-}
+  }
 
-.see_all {
+  .see_all {
     font-size: 1rem;
-}
+  }
 
-.top_icon,.card_icon{
+  .top_icon,
+  .card_icon {
     height: 80px;
-}
-.vision_text{
+  }
+  .vision_text {
     font-size: 1.388rem;
-}
+  }
 
-.caseStudy__grid {
+  .caseStudy__grid {
     flex-direction: column;
-    }
+  }
+  .caseStudy__header {
+    font-size: 2.019rem;
+  }
+
+  .partners__row img:nth-child(1) {
+    width: 172px;
+  }
+  .partners__row img:nth-child(2) {
+    width: 356px;
+  }
+  .partners__row img:nth-child(3) {
+    width: 164px;
+  }
 }

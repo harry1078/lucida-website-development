@@ -4,22 +4,33 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import banner from "../../assets/png/section1_banner.png";
 import banner2 from "../../assets/png/section1_banner2.png";
 import thumbnailBanner from "../../assets/png/thumbnail.png";
+import microsoft from '../../assets/png/microsoft.png'
+import julia from '../../assets/png/julia.png'
+import partner from '../../assets/png/partner.png'
 import nextGenIcon from "../../assets/svgs/nextGen-Icon.svg";
 import genAiIcon from "../../assets/svgs/genAi-Icon.svg";
 import contractIcon from "../../assets/svgs/contract-Icon.svg";
 import rightIcon from "../../assets/svgs/right-icon.svg";
 
-import "./Homepage.css";
 import Offerings from "../../components/Offerings/Offerings";
 import BusinessSolutions from "../../components/BusinessSolutions/BusinessSolutions";
+import "./Homepage.css";
+import Footer from "../../components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
+  const navigate = useNavigate();
+
+  const onClickHandler = ()=>{
+    navigate('/solutions')
+    window.scrollTo({top:0,left: 0, behavior:'smooth'})
+  }
   return (
     <>
       <Header />
-      <Container className="container-lg mt-xs-2.5 mt-md-3 mt-lg-5" fluid>
+      <Container className="container-lg homepage__container" fluid>
         {/* Top Section */}
-        <section className="mb-5">
+        <section className="hero__section">
           <Row>
             <Col sm={12} md={12} lg={6} className="mt-4 col1">
               <h2 className="mb-5 top_header">
@@ -80,7 +91,7 @@ const Homepage = () => {
           <div className="d-flex justify-content-between align-items-center headerDiv mb-4 mb-lg-5">
             <h3 className="title">The Future of Digital Solutions is Here</h3>
             <div>
-              <span className="see_all">See All</span>
+              <span className="see_all" onClick={onClickHandler}>See All</span>
             </div>
           </div>
           <Row className="gy-5 justify-content-center ">
@@ -239,7 +250,7 @@ const Homepage = () => {
               <h4 className="title">Your Business. Our Solutions.</h4>
             </Col>
             <Col className="col-12 col-md-5">
-              <div class="vision_text">
+              <div className="vision_text">
                 Build your vision product with our cutting edge solutions and
                 technologies
               </div>
@@ -265,7 +276,7 @@ const Homepage = () => {
         {/* Case Study Section  */}
         <section className="caseStudy__section">
           <h4 className="caseStudy__header mb-5">Check Out Our Case Studies</h4>
-          <Row className="d-flex flex-sm-column flex-md-row">
+          <Row>
             <Col className="col-12 col-sm-6 col-md-4 p-0">
               <Card className="card_layout h-100">
                 <Card.Body>
@@ -338,7 +349,21 @@ const Homepage = () => {
         <section className="solutions__section">
           <BusinessSolutions />
         </section>
+
+        {/* Partners Section */}
+        <Row className="partners__section">
+          <h2 className="partners__header mb-5">Partners we work with</h2>
+          <Col>
+            <Row className="partners__row">
+                <img src={microsoft} alt="microsoft__img" className="partners__img" />
+                <img src={partner} alt="snowflake__img" className="partners__img" />
+                <img src={julia} alt="julia__img" className="partners__img" />
+            </Row>
+          </Col>
+        </Row>
       </Container>
+      {/* Footer */}
+      <Footer />
     </>
   );
 };
