@@ -4,27 +4,34 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import banner from "../../assets/png/section1_banner.png";
 import banner2 from "../../assets/png/section1_banner2.png";
 import thumbnailBanner from "../../assets/png/thumbnail.png";
-import microsoft from '../../assets/png/microsoft.png'
-import julia from '../../assets/png/julia.png'
-import partner from '../../assets/png/partner.png'
+import microsoft from "../../assets/png/microsoft.png";
+import julia from "../../assets/png/julia.png";
+import partner from "../../assets/png/partner.png";
 import nextGenIcon from "../../assets/svgs/nextGen-Icon.svg";
 import genAiIcon from "../../assets/svgs/genAi-Icon.svg";
 import contractIcon from "../../assets/svgs/contract-Icon.svg";
 import rightIcon from "../../assets/svgs/right-icon.svg";
+// import phase1Icon from "../../assets/svgs/phase_01.svg";
+// import polygon from "../../assets/png/polygon.png";
+// import { FiCheck } from "react-icons/fi";
 
 import Offerings from "../../components/Offerings/Offerings";
 import BusinessSolutions from "../../components/BusinessSolutions/BusinessSolutions";
 import "./Homepage.css";
 import Footer from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
+import Transformation from "../../components/Slider/Transformation/Transformation";
+
 
 const Homepage = () => {
   const navigate = useNavigate();
 
-  const onClickHandler = ()=>{
-    navigate('/solutions')
-    window.scrollTo({top:0,left: 0, behavior:'smooth'})
-  }
+  const onClickHandler = () => {
+    navigate("/solutions");
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+
   return (
     <>
       <Header />
@@ -85,13 +92,192 @@ const Homepage = () => {
             </Col>
           </Row>
         </section>
+        {/* digital transformation Section  */}
+        <section className="my-4 digital__section">
+        <Transformation/>
+          {/* <div className="phase__row"> */}
+            {/* <Col className="col-md-3 phase__col">
+              <img src={polygon} alt="" className="polygon__img" />
+              <div className="phase__icon">
+                <img src={phase1Icon} alt="phase1" />
+              </div>
+              <div className="phase__div">
+                <div className=" phase__header mb-4">
+                  <span>Phase 01</span>
+                  <h6>Stratergy & Goals</h6>
+                </div>
+                <div className="phase__desc">
+                  <ul>
+                    <li className="mb-4">
+                      Create strategy based on organization current state
+                    </li>
+                    <li className="mb-4">
+                      Set goals and success criteria for transformation journey
+                    </li>
+                    <li className="mb-4">
+                      Identify initiatives for maximum impact
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </Col> */}
+            {/* <div className="phase__wrapper">
+            <div className="phase-col1">
+              <img src={polygon} alt="" className="polygon__img" />
+              <div className="phase__icon">
+                <img src={phase1Icon} alt="phase1" />
+              </div>
+              <div className="phase__div">
+                <div className=" phase__header mb-4">
+                  <span>Phase 01</span>
+                  <h6>Stratergy & Goals</h6>
+                </div>
+                <div className="phase__desc">
+                  <div className="content mb-4">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p>Create strategy based on organization current state</p>
+                  </div>
+                  <div className="content mb-4">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p>Set goals and success criteria for transformation journey</p>
+                  </div>
+                  <div className="content">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p> Identify initiatives for maximum impact</p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            </div>
+            <div className="phase__wrapper">
+            <div className="phase-col1">
+              <img src={polygon} alt="" className="polygon__img" />
+              <div className="phase__icon">
+                <img src={phase1Icon} alt="phase1" />
+              </div>
+              <div className="phase__div">
+                <div className=" phase__header mb-4">
+                  <span>Phase 01</span>
+                  <h6>Stratergy & Goals</h6>
+                </div>
+                <div className="phase__desc">
+                  <div className="content mb-4">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p>Create strategy based on organization current state</p>
+                  </div>
+                  <div className="content mb-4">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p>Set goals and success criteria for transformation journey</p>
+                  </div>
+                  <div className="content">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p> Identify initiatives for maximum impact</p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            </div>
+            <div className="phase__wrapper">
+            <div className="phase-col1">
+              <img src={polygon} alt="" className="polygon__img" />
+              <div className="phase__icon">
+                <img src={phase1Icon} alt="phase1" />
+              </div>
+              <div className="phase__div">
+                <div className=" phase__header mb-4">
+                  <span>Phase 01</span>
+                  <h6>Stratergy & Goals</h6>
+                </div>
+                <div className="phase__desc">
+                  <div className="content mb-4">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p>Create strategy based on organization current state</p>
+                  </div>
+                  <div className="content mb-4">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p>Set goals and success criteria for transformation journey</p>
+                  </div>
+                  <div className="content">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p> Identify initiatives for maximum impact</p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            </div>
+            <div className="phase__wrapper">
+            <div className="phase-col1">
+              <img src={polygon} alt="" className="polygon__img" />
+              <div className="phase__icon">
+                <img src={phase1Icon} alt="phase1" />
+              </div>
+              <div className="phase__div">
+                <div className=" phase__header mb-4">
+                  <span>Phase 01</span>
+                  <h6>Stratergy & Goals</h6>
+                </div>
+                <div className="phase__desc">
+                  <div className="content mb-4">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p>Create strategy based on organization current state</p>
+                  </div>
+                  <div className="content mb-4">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p>Set goals and success criteria for transformation journey</p>
+                  </div>
+                  <div className="content">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p> Identify initiatives for maximum impact</p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            </div>
+            <div className="phase__wrapper">
+            <div className="phase-col1">
+              <img src={polygon} alt="" className="polygon__img" />
+              <div className="phase__icon">
+                <img src={phase1Icon} alt="phase1" />
+              </div>
+              <div className="phase__div">
+                <div className=" phase__header mb-4">
+                  <span>Phase 01</span>
+                  <h6>Stratergy & Goals</h6>
+                </div>
+                <div className="phase__desc">
+                  <div className="content mb-4">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p>Create strategy based on organization current state</p>
+                  </div>
+                  <div className="content mb-4">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p>Set goals and success criteria for transformation journey</p>
+                  </div>
+                  <div className="content">
+                    <div><FiCheck className="check__icon" /></div>
+                    <p> Identify initiatives for maximum impact</p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            </div> */}
+            
+          {/* </div> */}
+        </section>
         {/* Services Section  */}
         <section className="service__section">
           <h4 className="service__text mb-4 mb-md-5">Services</h4>
           <div className="d-flex justify-content-between align-items-center headerDiv mb-4 mb-lg-5">
             <h3 className="title">The Future of Digital Solutions is Here</h3>
             <div>
-              <span className="see_all" onClick={onClickHandler}>See All</span>
+              <span className="see_all" onClick={onClickHandler}>
+                See All
+              </span>
             </div>
           </div>
           <Row className="gy-5 justify-content-center ">
@@ -355,9 +541,17 @@ const Homepage = () => {
           <h2 className="partners__header mb-5">Partners we work with</h2>
           <Col>
             <Row className="partners__row">
-                <img src={microsoft} alt="microsoft__img" className="partners__img" />
-                <img src={partner} alt="snowflake__img" className="partners__img" />
-                <img src={julia} alt="julia__img" className="partners__img" />
+              <img
+                src={microsoft}
+                alt="microsoft__img"
+                className="partners__img"
+              />
+              <img
+                src={partner}
+                alt="snowflake__img"
+                className="partners__img"
+              />
+              <img src={julia} alt="julia__img" className="partners__img" />
             </Row>
           </Col>
         </Row>

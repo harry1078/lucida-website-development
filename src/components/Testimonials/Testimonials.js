@@ -125,6 +125,8 @@ const Testimonials = () => {
               </Card.Body>
             </Card>
           ))}
+
+         
         </Slider>
       </Row>
     </div>
