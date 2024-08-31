@@ -93,7 +93,7 @@
     text-transform: uppercase;
 }
 
-ul.footer_nav {
+.footer_nav {
     float: right;
     text-transform: uppercase;
 }
@@ -105,8 +105,13 @@ ul.footer_nav {
 }
 
 .footer_nav a:hover {
-    color: #666;
+    color: #797cd0 !important;
     text-decoration: underline;
+}
+
+.footer_nav a {
+    color:#505050 !important; 
+    text-decoration: none;
 }
 
 .address__col p {

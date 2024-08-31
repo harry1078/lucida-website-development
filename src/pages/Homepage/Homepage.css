@@ -124,6 +124,7 @@
 }
 .phase__desc .content p{
  margin: 0;
+ font-family: Inter;
 }
 .check__icon{
   font-size: 1.5rem;
@@ -212,9 +213,13 @@
 
 .read_more {
   font-size: 1rem;
-  color: #797cd0;
   font-weight: 600;
   cursor: pointer;
+}
+
+.read_more a{
+  color: #797cd0 !important;
+  text-decoration: none;
 }
 
 /* Business & Solution */

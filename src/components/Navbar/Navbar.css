@@ -10,11 +10,12 @@
     flex-grow: 0;
 }
 .nav__links {
-   font-family: Karla;
+   font-family: Mulish;
    text-transform: uppercase;
    text-align: center;
+   font-weight: 700;
 }
-a {
+.nav__links a {
     color: #000;
     text-decoration: none;
     position: relative;

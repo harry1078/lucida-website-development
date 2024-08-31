@@ -8,18 +8,11 @@ import { useNavigate } from "react-router-dom";
 
 const BusinessSolutions = () => {
   const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState(false);
   const goToContactPage = () => {
     navigate("/contact");
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
-  const requestFormHandler = () => {
-    setIsOpen(true);
-  };
-  const closeFormHandler = () => {
-    setIsOpen(false);
-  };
   return (
     <>
       <Row className="header__row align-items-center mb-4">
@@ -32,10 +25,7 @@ const BusinessSolutions = () => {
         <Col md={6} className="solutions__column">
           <div className="d-flex solutions__content mb-5">
             <div className="solutions__desc ms-3 ms-md-4">
-              <div>
-                <RequestForm open={isOpen} close={closeFormHandler} />
-              </div>
-              {!isOpen && <p className="content m-0">
+            <p className="content m-0">
                 When it comes to choosing the perfect solution for your
                 business, it's essential to take a comprehensive approach that
                 aligns with your unique needs and goals. At Lucida Technologies,
@@ -43,19 +33,12 @@ const BusinessSolutions = () => {
                 we offer personalized consultations to help you find the right
                 fit. We believe in building long-lasting partnerships with our
                 clients.
-              </p>}
+              </p>
             </div>
           </div>
 
-          {!isOpen && <Row>
+          <Row>
             <Col className="mx-auto button__group">
-              <Button
-                className="demo_btn px-3 px-md-4"
-                type="button"
-                onClick={requestFormHandler}
-              >
-                Request Demo
-              </Button>
               <Button
                 className="contact_btn px-3 px-md-4 "
                 type="button"
@@ -64,7 +47,7 @@ const BusinessSolutions = () => {
                 Contact Us
               </Button>
             </Col>
-          </Row>}
+          </Row>
         </Col>
 
         <Col

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Navbar/Navbar";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import interview from "../../assets/png/interview.png";
@@ -7,6 +7,8 @@ import { FaSearch } from "react-icons/fa";
 import "./Contacts.css";
 import SpotLight from "../../components/Slider/SpotLight/SpotLight";
 import Footer from "../../components/Footer/Footer";
+import Swal from "sweetalert2";
+import { api_token } from "../../config/config";
 
 const Contacts = () => {
   const [enteredValues, setEnteredValues] = useState({
@@ -15,23 +17,97 @@ const Contacts = () => {
     email: "",
     message: "",
   });
+  const [nameIsInvalid, setNameIsInvalid] = useState(false);
+  const [phoneNumberIsInvalid, setPhoneNumberIsInvalid] = useState(false);
   const [emailIsInvalid, setEmailIsInvalid] = useState(false);
+  const [isBtnDisable, setIsBtnDisable] = useState("typing");
+
+  let nameReg = /^\S[A-Za-z\s]+$/;
+  let phoneReg = new RegExp(/^[0-9]{10}$/g);
+
   const handleInput = (identifier, value) => {
     setEnteredValues((prevValues) => ({
       ...prevValues,
       [identifier]: value,
     }));
   };
-  const submitHandler = (event) => {
+
+  const buttonIsEnabled =
+    enteredValues.name.length === 0 ||
+    enteredValues.phone.length === 0 ||
+    enteredValues.email.length === 0 ||
+    isBtnDisable === "SUBMITTED";
+
+  const clearInputData = () => {
+    setEnteredValues({
+      name: "",
+      phone: "",
+      email: "",
+      message: "",
+    });
+  };
+
+  const submitHandler = async (event) => {
     event.preventDefault();
     const emailIsValid = enteredValues.email.includes("@");
-    if (!emailIsValid) {
+    if (!nameReg.test(enteredValues.name)) {
+      setNameIsInvalid(true);
+      return;
+    }
+    setNameIsInvalid(false);
+
+    if (
+      !phoneReg.test(enteredValues.phone) &&
+      enteredValues.phone.length !== 10
+    ) {
+      setPhoneNumberIsInvalid(true);
+      return;
+    }
+    setPhoneNumberIsInvalid(false);
+
+    if (enteredValues.email.trim().length >= 0 && !emailIsValid) {
       setEmailIsInvalid(true);
       return;
     }
     setEmailIsInvalid(false);
-    console.log(enteredValues);
+    setIsBtnDisable("SUBMITTED");
+
+    try {
+      await sendFormData(enteredValues);
+      Swal.fire({
+        title: "Submitted Successfully!",
+        icon: "success",
+        allowOutsideClick: false,
+        confirmButtonText: "OK",
+      });
+      clearInputData();
+      setIsBtnDisable("typing");
+    } catch (error) {
+      console.log(error);
+    }
   };
+
+  const sendFormData = async (data) => {
+    console.log("data", data);
+    const response = await fetch(
+      "http://localhost:8000/api/v1/users/register",
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    const respData = await response.json();
+
+    if (!response.ok || !response.status === 200) {
+      throw new Error("Failed to submit the data");
+    }
+    console.log("responseData", respData);
+  };
+
   return (
     <>
       <Header />
@@ -51,11 +127,7 @@ const Contacts = () => {
             <Row>
               <Col className="col-12 col-md-6 d-flex">
                 <Form className="solutions__form" onSubmit={submitHandler}>
-                  <Form.Group
-                    md="12"
-                    className=" form__control"
-                    controlId="validationCustom01"
-                  >
+                  <Form.Group md="12" className="form__control">
                     <Form.Control
                       type="text"
                       name="name"
@@ -64,13 +136,13 @@ const Contacts = () => {
                         handleInput("name", event.target.value)
                       }
                       placeholder="Name*"
+                      className={nameIsInvalid && "input__error"}
                     />
+                    {nameIsInvalid && (
+                      <p className="error-text">Please enter a valid name.</p>
+                    )}
                   </Form.Group>
-                  <Form.Group
-                    md="12"
-                    className=" form__control"
-                    controlId="validationCustom02"
-                  >
+                  <Form.Group md="12" className=" form__control">
                     <Form.Control
                       type="number"
                       name="phone"
@@ -79,13 +151,15 @@ const Contacts = () => {
                         handleInput("phone", event.target.value)
                       }
                       placeholder="Phone*"
-                      min={10}
+                      className={phoneNumberIsInvalid && "input__error"}
                     />
+                    {phoneNumberIsInvalid && (
+                      <p className="error-text">
+                        Please enter a valid phone number.
+                      </p>
+                    )}
                   </Form.Group>
-                  <Form.Group
-                    className=" form__control"
-                    controlId="exampleForm.ControlInput1"
-                  >
+                  <Form.Group className=" form__control">
                     <Form.Control
                       type="email"
                       placeholder="Email*"
@@ -94,18 +168,15 @@ const Contacts = () => {
                       onChange={(event) =>
                         handleInput("email", event.target.value)
                       }
+                      className={emailIsInvalid && "input__error"}
                     />
-                    <div>
-                      {emailIsInvalid && (
-                        <p>Please enter a valid email address.</p>
-                      )}
-                    </div>
+                    {emailIsInvalid && (
+                      <p className="error-text">
+                        Please enter a valid email address.
+                      </p>
+                    )}
                   </Form.Group>
-                  <Form.Group
-                    className="form__control"
-                    controlId="exampleForm.ControlTextarea1"
-                    id="message"
-                  >
+                  <Form.Group className="form__control" id="message">
                     <Form.Control
                       as="textarea"
                       placeholder="Message (optional)"
@@ -118,7 +189,12 @@ const Contacts = () => {
                       className="text__area"
                     />
                   </Form.Group>
-                  <Button className="px-3 px-md-4 joinUs__btn" type="submit">
+                  <Button
+                    className="px-3 px-md-4 joinUs__btn mt-4"
+                    type="submit"
+                    onClick={submitHandler}
+                    disabled={buttonIsEnabled}
+                  >
                     Join Us
                   </Button>
                 </Form>
@@ -132,8 +208,9 @@ const Contacts = () => {
                   />
                   <Button
                     className="px-3 px-md-4 joinUs__btn"
-                    type="subnit"
+                    type="submit"
                     onClick={submitHandler}
+                    disabled={buttonIsEnabled}
                   >
                     Join Us
                   </Button>
@@ -157,13 +234,13 @@ const Contacts = () => {
                   help our clients ideate and develop their dream products
                 </p>
 
-                <Row className="mt-5">
+                {/* <Row className="mt-5">
                   <Col className="col-12 col-md-10 mx-auto">
                     <div className="input-group input__group">
                       <input
                         className="form-control border-end-0 border search__box"
                         type="search"
-                        placeholder="Find Your Destination"
+                        placeholder="Find Your Designation"
                         id="example-search-input"
                       />
                       <span className="input-group-append">
@@ -176,7 +253,7 @@ const Contacts = () => {
                       </span>
                     </div>
                   </Col>
-                </Row>
+                </Row> */}
               </Col>
               <Col className="col-md-6 text-center order-first order-md-last">
                 <img src={careers} className="careers__img" alt="careers" />

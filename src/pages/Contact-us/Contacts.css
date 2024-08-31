@@ -47,7 +47,16 @@
     resize: none;
 }
 
-.btn__div {}
+.error-text {
+    font-size: 14px;
+    color: #DC3545;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.input__error{
+    border: 1px solid #DC3545;
+}
 
 .joinUs__btn {
     width: 100%;

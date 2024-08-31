@@ -10,8 +10,8 @@ const Modals = (props) => {
 
   const jobDescStyles ={
     display: isOpen ? 'block' : '-webkit-box',
-    webkitBoxOrient: isOpen ? 'unset' : 'vertical',
-    webkitLineClamp: isOpen ? 'none' : '7',
+    WebkitBoxOrient: isOpen ? 'unset' : 'vertical',
+    WebkitLineClamp: isOpen ? 'none' : '7',
     overflow: isOpen ? 'auto':'hidden',
     }
   

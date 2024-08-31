@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Row } from "react-bootstrap";
 import uiUx from "../../../assets/png/UiUx.png";
 import fullStack from "../../../assets/png/fullStack.png";
@@ -9,11 +9,29 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { spotLightData } from "../../../dataset";
 import Modals from "../../Modal/Modal";
+import { getJobsList } from "../../../controllers/jobController";
 
 
 const SpotLight = () => {
   const [modalShow, setModalShow] = useState(false);
   const [cardData, setCardData] = useState([])
+  const [jobsListData, setJobsListData] = useState(null);
+
+  const fetchJobDetailsHandler = async () => {
+    const resp = await getJobsList({ status: "published" });
+    setJobsListData(resp.filter((job) => !job.deleted));
+  };
+
+  useEffect(() => {
+    if (jobsListData === null) {
+      fetchJobDetailsHandler();
+    }
+  }, [jobsListData]);
+
+  console.log('jobsListData',jobsListData);
+
+  const data = jobsListData?.map((item)=>item.title)
+  console.log('data',data);
   var settings = {
     infinite: false,
     speed: 500,
@@ -54,13 +72,35 @@ const SpotLight = () => {
   };
 
   const onClickHandler = (data)=>{
-    console.log('data',data);
     setModalShow(true)
     setCardData(data)
   }
   const closeModal = ()=>{
     setModalShow(false)
   }
+
+  const arr1 = [{id:1,name:'arjun'},{id:2,name:'singh'}]
+  const arr2 = [{id:1,age:20},{id:2,age:32}]
+
+  const resultArr = arr1.map((item)=>{
+    const arr2Item = arr2.find(i=>i.id===item.id)
+    if(arr2Item){
+      item.age = arr2Item.age
+    }
+    return item
+  })
+  console.log(resultArr,'res');
+
+  let merged__arr = []
+  for (let index = 0; index < arr1.length; index++) {
+    merged__arr.push(arr1[index])
+ }
+ for (let index = 0; index < arr2.length; index++) {
+    merged__arr.push(arr2[index])
+ }
+
+  console.log('arr',merged__arr);
+
   return (
     <Row className="mb-5">
       <h3 className="spotlight__heading mb-4">Spotlight</h3>
