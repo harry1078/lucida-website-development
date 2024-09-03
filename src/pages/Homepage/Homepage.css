@@ -10,12 +10,13 @@
 
 .hero__section,
 .service__section,
+.transformation__section,
 .business__section,
 .offerings__section,
 .caseStudy__section,
 .solutions__section,
 .partners__section {
-  margin: 0px 0 8rem 0rem;
+  margin: 0px 0 5rem 0rem;
 }
 
 .column2nd {
@@ -66,7 +67,7 @@
   padding: 5rem 0 0 0;
 }
 
-.phase__header span, h6 {
+.phase__header span, h6, .phase__title h5 {
   color: #797cd0;
   font-family: Mulish;
   font-weight: 700;
@@ -74,7 +75,7 @@
 .phase__header span {
   font-size: 13.5px;
 }
-.phase__header h6 {
+.phase__header h6, .phase__title h5 {
   font-size: 18px;
 }
 
@@ -144,7 +145,7 @@
 }
 
 .transformation__row{
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 .transformation__heading span {
   color: #797cd0;
@@ -276,7 +277,6 @@
   color: rgba(5, 5, 5, 0.7);
 }
 
-/* Offerings & Services  */
 
 /* partners  */
 
@@ -449,7 +449,7 @@
     width: 110%;
   }
 
-  .phase__header h6{
+  .phase__header h6, .phase__title h5{
     font-size: 15px;
   }
   .phase__header span{
@@ -593,7 +593,7 @@
   }
   
 
-  .phase__header h6{
+  .phase__header h6, .phase__title h5{
     font-size: 16px;
   }
   .phase__header span{
@@ -712,7 +712,7 @@
     width: 50%;
   }
 
-  .phase__header h6{
+  .phase__header h6, .phase__title h5{
     font-size: 16px;
   }
   .phase__header span{
@@ -804,7 +804,7 @@
   }
 
   .transformation__row{
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
   .transformation__heading {
     font-size: 28px;
@@ -812,6 +812,15 @@
 
   .transformation__heading span {
     font-size: 40px;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #797cd0;
+    background-color: #fff;
+  }
+
+  .accordion-button:focus {
+    box-shadow: #797cd0;
   }
 
  
@@ -829,7 +838,7 @@
     width: 50%;
   }
 
-  .phase__header h6{
+  .phase__header h6, .phase__title h5{
     font-size: 18px;
   }
   .phase__header span{

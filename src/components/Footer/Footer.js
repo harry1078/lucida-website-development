@@ -41,7 +41,7 @@ const Footer = () => {
           <img src={logo} className="lucida_logo mb-4" />
           <div>
             <Row className="footer__row">
-              <Col className="col-12 col-sm-2 col-md-2">
+              <Col className="col-sm-6 col-md-2">
                 <h1 className="footer__header mb-2.5 mb-md-4">company</h1>
                 <ul className="company__ul bottom__nav">
                   <li>
@@ -61,7 +61,19 @@ const Footer = () => {
                   </li>
                 </ul>
               </Col>
-              <Col className="col-12 col-sm-4 col-md-4">
+              <Col className="col-sm-6 col-md-3 address__col">
+                <h1 className="footer__header mb-2.5 mb-md-4">Address</h1>
+                <p>
+                  #3980/3981, 80 Feet Rd
+                  <br />
+                  1st phase, Girinagar, 3rd Block
+                  <br />
+                  BSK 3rd Stage
+                  <br />
+                  Bengaluru - 560 085
+                </p>
+              </Col>
+              <Col className="col-sm-6 col-md-4">
                 <h1 className="footer__header mb-2.5 mb-md-4">contact</h1>
                 <div className="footer-widget">
                   <ul className="company__ul">
@@ -123,18 +135,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </Col>
-              <Col className="col-12 col-sm-3 col-md-3 address__col">
-                <h1 className="footer__header mb-2.5 mb-md-4">Address</h1>
-                <p>
-                  #3980/3981, 80 Feet Rd
-                  <br />
-                  1st phase, Girinagar, 3rd Block
-                  <br />
-                  BSK 3rd Stage
-                  <br />
-                  Bengaluru - 560 085
-                </p>
-              </Col>
+             
             </Row>
           </div>
 

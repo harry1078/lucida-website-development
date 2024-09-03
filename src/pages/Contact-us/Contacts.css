@@ -34,10 +34,6 @@
     height: auto;
 }
 
-.careers__img {
-    width: 100%;
-    height: auto;
-}
 
 .form__control {
     width: 80%;
@@ -279,17 +275,17 @@
 
     .careers__subtitle {
         font-size: 14px;
-        margin: 0 0 3rem 0;
+        margin: 0 0 1rem 0;
     }
 
     .careers__desc {
         font-size: 14px;
+        text-align: center;
         line-height: 2rem;
     }
 
     .careers__img {
-        width: 65%;
-        height: auto;
+        width: 70%;
     }
 
     .spotlight__heading {
@@ -393,17 +389,17 @@
 
     .careers__subtitle {
         font-size: 16px;
-        margin: 0 0 3rem 0;
+        margin: 0 0 1.5rem 0;
     }
 
     .careers__desc {
         font-size: 16px;
+        text-align: center;
         line-height: 2rem;
     }
 
     .careers__img {
-        width: 76%;
-        height: auto;
+        width: 72%;
     }
 
     .spotlight__heading {
@@ -505,7 +501,7 @@
     }
 
     .careers__img {
-        width: 85%;
+        width: 74%;
     }
 
     .solutions__form button {
@@ -597,7 +593,7 @@
     }
 
     .careers__img {
-        width: 100%;
+        width: 75%;
     }
 
     .careers__heading {
@@ -606,7 +602,6 @@
 
     .careers__desc {
         font-size: 22px;
-        text-align: center;
         line-height: 60px;
     }
 

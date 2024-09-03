@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/Navbar/Navbar";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import banner from "../../assets/png/section1_banner.png";
 import banner2 from "../../assets/png/section1_banner2.png";
 import thumbnailBanner from "../../assets/png/thumbnail.png";
@@ -11,9 +11,6 @@ import nextGenIcon from "../../assets/svgs/nextGen-Icon.svg";
 import genAiIcon from "../../assets/svgs/genAi-Icon.svg";
 import contractIcon from "../../assets/svgs/contract-Icon.svg";
 import rightIcon from "../../assets/svgs/right-icon.svg";
-// import phase1Icon from "../../assets/svgs/phase_01.svg";
-// import polygon from "../../assets/png/polygon.png";
-// import { FiCheck } from "react-icons/fi";
 
 import Offerings from "../../components/Offerings/Offerings";
 import BusinessSolutions from "../../components/BusinessSolutions/BusinessSolutions";
@@ -48,7 +45,6 @@ const Homepage = () => {
                 voyage.
               </h2>
               <div className="d-flex mb-5 digital__content">
-                {/* <div className="vertical_line"></div> */}
                 <div className="description ms-4">
                   <p className="content pe-lg-4">
                     At Lucida, we understand that digital transformation is more
@@ -69,7 +65,7 @@ const Homepage = () => {
                   </p>
                 </div>
               </div>
-              <Row>
+              {/* <Row>
                 <Col className="mx-auto text-center">
                   <Button
                     className="getStarted_btn px-4"
@@ -79,7 +75,7 @@ const Homepage = () => {
                     Get Started
                   </Button>
                 </Col>
-              </Row>
+              </Row> */}
             </Col>
             <Col
               sm={12}
@@ -92,182 +88,9 @@ const Homepage = () => {
             </Col>
           </Row>
         </section>
-        {/* digital transformation Section  */}
-        <section className="my-4 digital__section">
+        {/* Digital transformation Section  */}
+        <section className="digital__section">
         <Transformation/>
-          {/* <div className="phase__row"> */}
-            {/* <Col className="col-md-3 phase__col">
-              <img src={polygon} alt="" className="polygon__img" />
-              <div className="phase__icon">
-                <img src={phase1Icon} alt="phase1" />
-              </div>
-              <div className="phase__div">
-                <div className=" phase__header mb-4">
-                  <span>Phase 01</span>
-                  <h6>Stratergy & Goals</h6>
-                </div>
-                <div className="phase__desc">
-                  <ul>
-                    <li className="mb-4">
-                      Create strategy based on organization current state
-                    </li>
-                    <li className="mb-4">
-                      Set goals and success criteria for transformation journey
-                    </li>
-                    <li className="mb-4">
-                      Identify initiatives for maximum impact
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </Col> */}
-            {/* <div className="phase__wrapper">
-            <div className="phase-col1">
-              <img src={polygon} alt="" className="polygon__img" />
-              <div className="phase__icon">
-                <img src={phase1Icon} alt="phase1" />
-              </div>
-              <div className="phase__div">
-                <div className=" phase__header mb-4">
-                  <span>Phase 01</span>
-                  <h6>Stratergy & Goals</h6>
-                </div>
-                <div className="phase__desc">
-                  <div className="content mb-4">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p>Create strategy based on organization current state</p>
-                  </div>
-                  <div className="content mb-4">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p>Set goals and success criteria for transformation journey</p>
-                  </div>
-                  <div className="content">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p> Identify initiatives for maximum impact</p>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            </div>
-            <div className="phase__wrapper">
-            <div className="phase-col1">
-              <img src={polygon} alt="" className="polygon__img" />
-              <div className="phase__icon">
-                <img src={phase1Icon} alt="phase1" />
-              </div>
-              <div className="phase__div">
-                <div className=" phase__header mb-4">
-                  <span>Phase 01</span>
-                  <h6>Stratergy & Goals</h6>
-                </div>
-                <div className="phase__desc">
-                  <div className="content mb-4">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p>Create strategy based on organization current state</p>
-                  </div>
-                  <div className="content mb-4">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p>Set goals and success criteria for transformation journey</p>
-                  </div>
-                  <div className="content">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p> Identify initiatives for maximum impact</p>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            </div>
-            <div className="phase__wrapper">
-            <div className="phase-col1">
-              <img src={polygon} alt="" className="polygon__img" />
-              <div className="phase__icon">
-                <img src={phase1Icon} alt="phase1" />
-              </div>
-              <div className="phase__div">
-                <div className=" phase__header mb-4">
-                  <span>Phase 01</span>
-                  <h6>Stratergy & Goals</h6>
-                </div>
-                <div className="phase__desc">
-                  <div className="content mb-4">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p>Create strategy based on organization current state</p>
-                  </div>
-                  <div className="content mb-4">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p>Set goals and success criteria for transformation journey</p>
-                  </div>
-                  <div className="content">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p> Identify initiatives for maximum impact</p>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            </div>
-            <div className="phase__wrapper">
-            <div className="phase-col1">
-              <img src={polygon} alt="" className="polygon__img" />
-              <div className="phase__icon">
-                <img src={phase1Icon} alt="phase1" />
-              </div>
-              <div className="phase__div">
-                <div className=" phase__header mb-4">
-                  <span>Phase 01</span>
-                  <h6>Stratergy & Goals</h6>
-                </div>
-                <div className="phase__desc">
-                  <div className="content mb-4">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p>Create strategy based on organization current state</p>
-                  </div>
-                  <div className="content mb-4">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p>Set goals and success criteria for transformation journey</p>
-                  </div>
-                  <div className="content">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p> Identify initiatives for maximum impact</p>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            </div>
-            <div className="phase__wrapper">
-            <div className="phase-col1">
-              <img src={polygon} alt="" className="polygon__img" />
-              <div className="phase__icon">
-                <img src={phase1Icon} alt="phase1" />
-              </div>
-              <div className="phase__div">
-                <div className=" phase__header mb-4">
-                  <span>Phase 01</span>
-                  <h6>Stratergy & Goals</h6>
-                </div>
-                <div className="phase__desc">
-                  <div className="content mb-4">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p>Create strategy based on organization current state</p>
-                  </div>
-                  <div className="content mb-4">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p>Set goals and success criteria for transformation journey</p>
-                  </div>
-                  <div className="content">
-                    <div><FiCheck className="check__icon" /></div>
-                    <p> Identify initiatives for maximum impact</p>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            </div> */}
-            
-          {/* </div> */}
         </section>
         {/* Services Section  */}
         <section className="service__section">
@@ -535,7 +358,6 @@ const Homepage = () => {
         <section className="solutions__section">
           <BusinessSolutions />
         </section>
-
         {/* Partners Section */}
         <Row className="partners__section">
           <h2 className="partners__header mb-5">Partners we work with</h2>

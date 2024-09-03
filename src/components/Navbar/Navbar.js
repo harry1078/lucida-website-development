@@ -29,7 +29,7 @@ function Header() {
             {navigation.map((item) => (
               <NavLink key={item.name} to={item.href} onClick={navOnClickHandler}>
                 {item.name}
-                <div className="dot"></div>
+                {/* <div className="dot"></div> */}
               </NavLink>
             ))}
           </Nav>

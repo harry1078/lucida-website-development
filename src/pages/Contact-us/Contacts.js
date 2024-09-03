@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../../components/Navbar/Navbar";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import interview from "../../assets/png/interview.png";
 import careers from "../../assets/png/careers.png";
-import { FaSearch } from "react-icons/fa";
 import "./Contacts.css";
 import SpotLight from "../../components/Slider/SpotLight/SpotLight";
 import Footer from "../../components/Footer/Footer";
 import Swal from "sweetalert2";
-import { api_token } from "../../config/config";
 
 const Contacts = () => {
   const [enteredValues, setEnteredValues] = useState({
@@ -17,6 +15,9 @@ const Contacts = () => {
     email: "",
     message: "",
   });
+  const [didEdit, setDidEdit] = useState({
+    email: false,
+  });
   const [nameIsInvalid, setNameIsInvalid] = useState(false);
   const [phoneNumberIsInvalid, setPhoneNumberIsInvalid] = useState(false);
   const [emailIsInvalid, setEmailIsInvalid] = useState(false);
@@ -24,6 +25,7 @@ const Contacts = () => {
 
   let nameReg = /^\S[A-Za-z\s]+$/;
   let phoneReg = new RegExp(/^[0-9]{10}$/g);
+  const emailIsValid = didEdit.email && !enteredValues.email.includes("@");
 
   const handleInput = (identifier, value) => {
     setEnteredValues((prevValues) => ({
@@ -46,10 +48,16 @@ const Contacts = () => {
       message: "",
     });
   };
+  
+  const handleInputBlur = (identifier)=>{
+    setDidEdit((prevEdit)=>({
+      ...prevEdit,
+      [identifier]: true
+    }))
+  }
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    const emailIsValid = enteredValues.email.includes("@");
     if (!nameReg.test(enteredValues.name)) {
       setNameIsInvalid(true);
       return;
@@ -65,7 +73,7 @@ const Contacts = () => {
     }
     setPhoneNumberIsInvalid(false);
 
-    if (enteredValues.email.trim().length >= 0 && !emailIsValid) {
+    if (enteredValues.email.trim().length >= 0 && emailIsValid) {
       setEmailIsInvalid(true);
       return;
     }
@@ -155,7 +163,7 @@ const Contacts = () => {
                     />
                     {phoneNumberIsInvalid && (
                       <p className="error-text">
-                        Please enter a valid phone number.
+                        Please enter a valid 10-digit phone number.
                       </p>
                     )}
                   </Form.Group>
@@ -164,13 +172,14 @@ const Contacts = () => {
                       type="email"
                       placeholder="Email*"
                       name="email"
+                      onBlur={()=>handleInputBlur('email')}
                       value={enteredValues.email}
                       onChange={(event) =>
                         handleInput("email", event.target.value)
                       }
-                      className={emailIsInvalid && "input__error"}
+                      className={emailIsValid && "input__error"}
                     />
-                    {emailIsInvalid && (
+                    {emailIsValid && (
                       <p className="error-text">
                         Please enter a valid email address.
                       </p>
@@ -233,27 +242,6 @@ const Contacts = () => {
                   our technology prowess, delivery focus and quality of work to
                   help our clients ideate and develop their dream products
                 </p>
-
-                {/* <Row className="mt-5">
-                  <Col className="col-12 col-md-10 mx-auto">
-                    <div className="input-group input__group">
-                      <input
-                        className="form-control border-end-0 border search__box"
-                        type="search"
-                        placeholder="Find Your Designation"
-                        id="example-search-input"
-                      />
-                      <span className="input-group-append">
-                        <button
-                          className="btn btn-outline-secondary border-start-0 border-bottom-0 border ms-n5 search__btn"
-                          type="button"
-                        >
-                          <FaSearch className="search__icon" />
-                        </button>
-                      </span>
-                    </div>
-                  </Col>
-                </Row> */}
               </Col>
               <Col className="col-md-6 text-center order-first order-md-last">
                 <img src={careers} className="careers__img" alt="careers" />

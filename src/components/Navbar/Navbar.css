@@ -24,21 +24,7 @@
     color: #797CD0;
   }
 
-.dot {
-    position: absolute;
-    left: 45%;
-    top: 26px;
-    border-radius: 50%;
-    background-color: #797cd0;
-    width: 0.4rem;
-    height: 0.4rem;
-    opacity: 0;
-    display: none;
-}
 
-#navigation a.active .dot{
-    opacity: 1;
-}
 
 @media only screen and (max-width: 575px) {
     .nav__links {
@@ -48,9 +34,6 @@
   }
 
 @media (min-width: 576px) {
-    .dot {
-        display: none;
-    }
     .nav__links {
         gap: 1rem;
         font-size: 13px;
@@ -75,9 +58,6 @@
 @media (min-width: 992px) {
     .logo {
         width: 136px;
-    }
-    .dot {
-        display: block;
     }
     .nav__links {
         gap: 2rem;

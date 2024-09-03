@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Navbar/Navbar";
 import { Col, Container, Nav, Row, Tab } from "react-bootstrap";
-import epiphiny from "../../assets/png/epiphany1.png";
+import epiphany1 from "../../assets/png/epiphany1.png";
 import envisage from "../../assets/png/envisage.png";
 import autoUI from "../../assets/png/autoUI.png";
 import epiphany from "../../assets/png/epiphany.png";
@@ -54,7 +54,7 @@ const Solutions = () => {
                         </div>
                       </Col>
                       <Col className="col-12 col-sm-12 col-md-6 epiphany__col2">
-                        <img src={epiphiny} className="epiphiny1__img" />
+                        <img src={epiphany1} className="epiphiny1__img" />
                       </Col>
                       <Col className="col-12">
                         <p className="epiphany__desc">

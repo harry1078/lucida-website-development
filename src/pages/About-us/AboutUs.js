@@ -4,58 +4,19 @@ import { Card, Col, Container, Nav, Row, Tab } from "react-bootstrap";
 import aboutUsBanner from "../../assets/png/aboutUs_banner.png";
 import workLife from "../../assets/png/workLife.png";
 import celebrations from "../../assets/png/celebrations.png";
-import celebrations1 from "../../assets/png/celebrations1.png";
-import celebrations2 from "../../assets/png/celebrations2.png";
-import celebrations3 from "../../assets/png/celebrations3.png";
-import collaborative1 from "../../assets/png/collaborative1.png";
-import collaborative2 from "../../assets/png/collaborative2.png";
-import collaborative3 from "../../assets/png/collaborative3.png";
 import funMore from "../../assets/png/fun&More.png";
-import fun1 from "../../assets/png/fun1.png";
-import fun2 from "../../assets/png/fun2.png";
-import fun3 from "../../assets/png/fun3.png";
 import leader1 from "../../assets/png/leader1.png";
 import leader2 from "../../assets/png/leader2.png";
 import leader3 from "../../assets/png/leader3.png";
 import leader4 from "../../assets/png/leader4.png";
 import leader5 from "../../assets/png/leader5.png";
 import leader6 from "../../assets/png/leader6.png";
-import avatar1 from "../../assets/png/avatar1.png";
-import avatar2 from "../../assets/png/avatar2.png";
-import avatar3 from "../../assets/png/avatar3.png";
 import { FaGraduationCap } from "react-icons/fa6";
-import { FaQuoteLeft } from "react-icons/fa";
-import { FaStar } from "react-icons/fa";
-import { FaStarHalfAlt } from "react-icons/fa";
-import "./AboutUs.css";
 import Sliders from "../../components/Slider/slider";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import Footer from "../../components/Footer/Footer";
-
-const workLife__imgData = [
-  { img: collaborative1 },
-  { img: collaborative2 },
-  { img: collaborative3 },
-  { img: collaborative1 },
-  { img: collaborative2 },
-  { img: collaborative3 },
-];
-const celebrations__imgData = [
-  { img: celebrations1 },
-  { img: celebrations2 },
-  { img: celebrations3 },
-  { img: celebrations1 },
-  { img: celebrations2 },
-  { img: celebrations3 },
-];
-const funMore__imgData = [
-  { img: fun1 },
-  { img: fun2 },
-  { img: fun3 },
-  { img: fun1 },
-  { img: fun2 },
-  { img: fun3 },
-];
+import { celebrations__imgData, funMore__imgData, workLife__imgData } from "../../dataset";
+import "./AboutUs.css";
 
 const AboutUs = () => {
   return (
@@ -416,7 +377,6 @@ const AboutUs = () => {
               </Col>
             </Row>
           </div>
-
           {/* Testimonial  */}
           <Testimonials />
         </section>
