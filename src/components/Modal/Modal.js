@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
+import JobModal from "./JobModal";
 
 
 const Modals = (props) => {
-  const { data, show, onHide } = props;
+  const { data, onHide } = props;
   const [isOpen, setIsOpen]  = useState(false)
+  const [modalShow, setModalShow] = useState(false);
 
   const jobDescStyles ={
     display: isOpen ? 'block' : '-webkit-box',
@@ -18,6 +20,10 @@ const Modals = (props) => {
   const onClickHandler = ()=>{
     setIsOpen(!isOpen)
   }
+
+  const onApplyButtonHandler = ()=>{
+    setModalShow(true)
+  }
   return (
     <>
       <Modal
@@ -25,6 +31,7 @@ const Modals = (props) => {
         size="lg"
         backdrop="static"
         aria-labelledby="contained-modal-title-vcenter"
+        className={modalShow ? 'blur__modal' : ''}
         centered
       >
         <Modal.Header closeButton>
@@ -49,7 +56,7 @@ const Modals = (props) => {
         <Modal.Body>
           <div>
             <div className="mb-2 mb-md-4" style={jobDescStyles}>
-              <div className="qualifications" >
+              <div className="qualifications">
                 <h5>Qualifications:</h5>
                 <ul>
                   <li>
@@ -111,15 +118,20 @@ const Modals = (props) => {
                 type="button"
                 onClick={onClickHandler}
               >
-                {isOpen ? 'Read Less' : 'Read More'}
+                {isOpen ? "Read Less" : "Read More"}
               </Button>
-              <Button className="apply__btn px-3 px-md-4 " type="button">
+              <Button
+                className="apply__btn px-3 px-md-4 "
+                type="button"
+                onClick={onApplyButtonHandler}
+              >
                 Apply
               </Button>
             </div>
           </div>
         </Modal.Body>
       </Modal>
+      {<JobModal show={modalShow} onHide={() => setModalShow(false)} />}
     </>
   );
 };

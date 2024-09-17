@@ -19,7 +19,7 @@ const Solutions = () => {
     <>
       <Header />
       <Container className="container-lg solutions__container" fluid>
-        <Row className="justify-content-center mb-5">
+        <Row className="justify-content-center mb-4">
           <Tab.Container id="left-tabs-example" defaultActiveKey="first">
             <Row className="tab__row  align-items-center my-5">
               <Col className="col-12 col-sm-6 col-md-6 d-flex tab__column">
@@ -44,7 +44,7 @@ const Solutions = () => {
                           <img src={epiphany} className="section__img" alt="epiphany" />
                         </div>
 
-                        <div className="epiphany__title my-5">
+                        <div className="epiphany__title my-4">
                           LLM TEXT ANALYSIS using Gen AI
                         </div>
 
@@ -83,7 +83,7 @@ const Solutions = () => {
                           <img src={envisage} className="section__img" alt="envisage" />
                         </div>
 
-                        <div className="epiphany__title my-5">
+                        <div className="epiphany__title my-4">
                           IMAGE & VIDEO ANALYSIS PLATFORM using Gen AI
                         </div>
 
@@ -120,7 +120,7 @@ const Solutions = () => {
                           <img src={autoUI} className="section__img" id='autoUI' alt="autoAI image" />
                         </div>
 
-                        <div className="epiphany__title my-5">
+                        <div className="epiphany__title my-4">
                           DESIGN<span>.</span>
                           GENERATE. DEPLOY. EFFORTLESSLY
                         </div>
@@ -163,7 +163,7 @@ const Solutions = () => {
                       <Col className="col-12 col-sm-12 col-md-6">
                         <div className="d-flex align-items-baseline gap-3 gap-md-4 ">
                           <span className="number">1</span>
-                          <div className="analytics__title my-5">
+                          <div className="analytics__title my-4">
                             Big Data & Analytics
                           </div>
                         </div>
@@ -184,7 +184,7 @@ const Solutions = () => {
                     </Row>
                     <Row className="details">
                       <Col className="col-12 col-sm-12 col-md-6">
-                        <div className="d-flex align-items-baseline gap-3 gap-md-4 mb-5">
+                        <div className="d-flex align-items-baseline gap-3 gap-md-4 mb-4">
                           <span className="number">2</span>
                           <div className="analytics__title">
                           Artificial Intelligence & Machine Learning
@@ -207,7 +207,7 @@ const Solutions = () => {
                       <Col className="col-12 col-sm-12 col-md-6">
                         <div className="d-flex align-items-baseline gap-3 gap-md-4 ">
                           <span className="number">3</span>
-                          <div className="analytics__title my-5">
+                          <div className="analytics__title my-4">
                           Gen AI Solutions
                           </div>
                         </div>
@@ -228,7 +228,7 @@ const Solutions = () => {
                       <Col className="col-12 col-sm-12 col-md-6 ">
                         <div className="d-flex align-items-baseline gap-3 gap-md-4 ">
                           <span className="number">4</span>
-                          <div className="analytics__title my-5">
+                          <div className="analytics__title my-4">
                           Product Development
                           </div>
                         </div>

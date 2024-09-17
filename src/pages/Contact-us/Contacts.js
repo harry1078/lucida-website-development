@@ -7,17 +7,18 @@ import "./Contacts.css";
 import SpotLight from "../../components/Slider/SpotLight/SpotLight";
 import Footer from "../../components/Footer/Footer";
 import Swal from "sweetalert2";
+import { applyQuery } from "../../controllers/jobController";
+import { useNavigate } from "react-router-dom";
 
 const Contacts = () => {
+  const navigate = useNavigate();
   const [enteredValues, setEnteredValues] = useState({
     name: "",
     phone: "",
     email: "",
     message: "",
   });
-  const [didEdit, setDidEdit] = useState({
-    email: false,
-  });
+
   const [nameIsInvalid, setNameIsInvalid] = useState(false);
   const [phoneNumberIsInvalid, setPhoneNumberIsInvalid] = useState(false);
   const [emailIsInvalid, setEmailIsInvalid] = useState(false);
@@ -25,7 +26,7 @@ const Contacts = () => {
 
   let nameReg = /^\S[A-Za-z\s]+$/;
   let phoneReg = new RegExp(/^[0-9]{10}$/g);
-  const emailIsValid = didEdit.email && !enteredValues.email.includes("@");
+  const emailIsValid = !enteredValues.email.includes("@");
 
   const handleInput = (identifier, value) => {
     setEnteredValues((prevValues) => ({
@@ -48,13 +49,6 @@ const Contacts = () => {
       message: "",
     });
   };
-  
-  const handleInputBlur = (identifier)=>{
-    setDidEdit((prevEdit)=>({
-      ...prevEdit,
-      [identifier]: true
-    }))
-  }
 
   const submitHandler = async (event) => {
     event.preventDefault();
@@ -81,39 +75,37 @@ const Contacts = () => {
     setIsBtnDisable("SUBMITTED");
 
     try {
-      await sendFormData(enteredValues);
-      Swal.fire({
-        title: "Submitted Successfully!",
-        icon: "success",
-        allowOutsideClick: false,
-        confirmButtonText: "OK",
-      });
-      clearInputData();
-      setIsBtnDisable("typing");
+      const response = await applyQuery(enteredValues);
+      if (response.status === 200 || response.ok) {
+        Swal.fire({
+          title: "Submitted Successfully!",
+          icon: "success",
+          allowOutsideClick: false,
+          confirmButtonText: "OK",
+        });
+        clearInputData();
+        navigate("/");
+        setIsBtnDisable("SUBMITTED");
+      } else {
+        if (response?.data?.error?.length > 0) {
+          errorInResponse(`${response.data.error}`);
+          setIsBtnDisable("typing");
+        } else {
+          errorInResponse(`Something went wrong! please try again later.`);
+        }
+      }
     } catch (error) {
       console.log(error);
     }
   };
 
-  const sendFormData = async (data) => {
-    console.log("data", data);
-    const response = await fetch(
-      "http://localhost:8000/api/v1/users/register",
-      {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-
-    const respData = await response.json();
-
-    if (!response.ok || !response.status === 200) {
-      throw new Error("Failed to submit the data");
-    }
-    console.log("responseData", respData);
+  const errorInResponse = (text) => {
+    return Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: text,
+      allowOutsideClick: false,
+    });
   };
 
   return (
@@ -172,14 +164,13 @@ const Contacts = () => {
                       type="email"
                       placeholder="Email*"
                       name="email"
-                      onBlur={()=>handleInputBlur('email')}
                       value={enteredValues.email}
                       onChange={(event) =>
                         handleInput("email", event.target.value)
                       }
-                      className={emailIsValid && "input__error"}
+                      className={emailIsInvalid && "input__error"}
                     />
-                    {emailIsValid && (
+                    {emailIsInvalid && (
                       <p className="error-text">
                         Please enter a valid email address.
                       </p>

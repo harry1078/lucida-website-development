@@ -175,6 +175,17 @@
 }
 
 @media only screen and (max-width: 575px) {
+
+  .tabs__row,
+.team__row,
+.leadership__section,
+.testimonials__section {
+  margin: 0rem 0rem 3rem 0rem;
+}
+
+.banner__row {
+  margin-bottom: 8rem;
+}
   .topSection__block {
     padding: 0.8rem 1.2rem;
   }
@@ -240,6 +251,16 @@
 
 }
 @media (min-width: 576px) {
+  .tabs__row,
+.team__row,
+.leadership__section,
+.testimonials__section {
+  margin: 0rem 0rem 3rem 0rem;
+}
+
+.banner__row {
+  margin-bottom: 8rem;
+}
   .topSection__block {
     padding: 1rem 2rem;
   }
@@ -364,6 +385,16 @@
 }
 }
 @media (min-width: 992px) {
+  .tabs__row,
+.team__row,
+.leadership__section,
+.testimonials__section {
+  margin: 0rem 0rem 4rem 0rem;
+}
+
+.banner__row {
+  margin-bottom: 10rem;
+}
   .topSection__block {
     padding: 1.5rem 3rem;
   }

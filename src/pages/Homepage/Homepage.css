@@ -7,18 +7,6 @@
 }
 
 
-
-.hero__section,
-.service__section,
-.transformation__section,
-.business__section,
-.offerings__section,
-.caseStudy__section,
-.solutions__section,
-.partners__section {
-  margin: 0px 0 5rem 0rem;
-}
-
 .column2nd {
   text-align: end;
 }
@@ -300,6 +288,17 @@
     margin-top: 6rem;
   }
 
+  .hero__section,
+.service__section,
+.transformation__section,
+.business__section,
+.offerings__section,
+.caseStudy__section,
+.solutions__section,
+.partners__section {
+  margin: 0px 0 3rem 0rem;
+}
+
   .vertical_line {
     width: 0.8rem;
   }
@@ -477,6 +476,17 @@
   .contact__container {
     margin-top: 6rem;
   }
+
+  .hero__section,
+.service__section,
+.transformation__section,
+.business__section,
+.offerings__section,
+.caseStudy__section,
+.solutions__section,
+.partners__section {
+  margin: 0px 0 3rem 0rem;
+}
 
   .vertical_line {
     width: 1rem;
@@ -740,6 +750,17 @@
   .contact__container {
     margin-top: 9rem;
   }
+
+  .hero__section,
+.service__section,
+.transformation__section,
+.business__section,
+.offerings__section,
+.caseStudy__section,
+.solutions__section,
+.partners__section {
+  margin: 0px 0 5rem 0rem;
+}
 
   .col2 {
     order: 2;

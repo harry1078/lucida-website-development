@@ -28,10 +28,7 @@ const SpotLight = () => {
     }
   }, [jobsListData]);
 
-  console.log('jobsListData',jobsListData);
 
-  const data = jobsListData?.map((item)=>item.title)
-  console.log('data',data);
   var settings = {
     infinite: false,
     speed: 500,
@@ -79,27 +76,6 @@ const SpotLight = () => {
     setModalShow(false)
   }
 
-  const arr1 = [{id:1,name:'arjun'},{id:2,name:'singh'}]
-  const arr2 = [{id:1,age:20},{id:2,age:32}]
-
-  const resultArr = arr1.map((item)=>{
-    const arr2Item = arr2.find(i=>i.id===item.id)
-    if(arr2Item){
-      item.age = arr2Item.age
-    }
-    return item
-  })
-  console.log(resultArr,'res');
-
-  let merged__arr = []
-  for (let index = 0; index < arr1.length; index++) {
-    merged__arr.push(arr1[index])
- }
- for (let index = 0; index < arr2.length; index++) {
-    merged__arr.push(arr2[index])
- }
-
-  console.log('arr',merged__arr);
 
   return (
     <Row className="mb-5">

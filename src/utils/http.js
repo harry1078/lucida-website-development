@@ -1,8 +1,6 @@
 import axios from "axios";
 import { api_token } from "../config/config";
 
-// const axios = require("axios").default;
-
 export function getApi(pUrl, params) {
   let url = pUrl;
 
@@ -17,3 +15,28 @@ export function getApi(pUrl, params) {
   });
 }
 
+export function postApi(pUrl, data) {
+  let url = pUrl;
+
+  return axios({
+    method: "post",
+    url: url,
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+    data: data,
+  });
+}
+
+export function postQuery(pUrl, data) {
+  let url = pUrl;
+
+  return axios({
+    method: "post",
+    url: url,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: data,
+  });
+}

@@ -1,3 +1,7 @@
+#application__form {
+    font-family: Mulish;
+}
+
 .top__row {
     padding: 4rem 4rem 2rem;
     background-color: #D9D9D9;
@@ -50,7 +54,7 @@
     padding: 0.5rem;
 }
 
-.input__error{
+.input__error {
     border: 1px solid #DC3545;
 }
 
@@ -58,6 +62,10 @@
     width: 100%;
     background-color: #1A2747 !important;
     border-color: #1A2747 !important;
+}
+
+.blur__modal {
+    -webkit-filter: blur(4px);
 }
 
 .careers__heading {
@@ -116,6 +124,7 @@
 .spotlight__title {
     color: #797cd0;
     text-align: center;
+    text-wrap: nowrap;
 }
 
 .modal-content {
@@ -220,16 +229,70 @@
     background-color: #797cd0;
 }
 
-.solutions__form{
+.solutions__form {
     width: 100%;
     margin-top: auto;
+}
+
+.job__form {
+    width: 100%;
+}
+
+.btn__box {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.btn__box button {
+    width: 50%;
+}
+
+.submit_btn {
+    background-color: #797CD0 !important;
+    border-color: #797CD0;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+
+.close_btn {
+    color: #797CD0;
+    background-color: #fff !important;
+    border-color: #797CD0;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+
+.close_btn:hover {
+    color: #797CD0;
+    border-color: #797CD0;
+}
+
+.submit_btn:hover,
+.close_btn:hover {
+    border-color: #797CD0;
 }
 
 .form__control {
     margin-bottom: 2rem;
 }
-#message{
+
+#message {
     margin-bottom: 0;
+}
+
+#resume__header {
+    color: #5d5d5d;
+}
+
+.remove-file {
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    transition: background-color 0.5s ease-out;
+}
+
+.remove-file:hover{
+    background-color: #e9c1c1;
 }
 
 
@@ -258,6 +321,10 @@
 
     .form__control {
         width: 100%;
+    }
+
+    #job__modal .modal-content {
+        margin: 1rem;
     }
 
     .careers__heading {
@@ -342,11 +409,21 @@
         line-height: 1.75rem;
     }
 
-    .btn__block button{
+    .btn__block button,
+    .btn__box button,
+    .btn__box button {
         font-size: 14px;
     }
 
+    .job__form .form-control {
+        font-size: 12px;
+    }
 
+    #resume__header,
+    .drop-file-preview__title,
+    .remove-file {
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 576px) {
@@ -372,6 +449,10 @@
 
     .form__control {
         width: 100%;
+    }
+
+    #job__modal .modal-content {
+        margin: 1rem;
     }
 
     .careers__heading {
@@ -456,8 +537,19 @@
         line-height: 1.75rem;
     }
 
-    .btn__block button{
+    .btn__block button,
+    .btn__box button {
         font-size: 15px;
+    }
+
+    .job__form .form-control {
+        font-size: 12px;
+    }
+
+    #resume__header,
+    .drop-file-preview__title,
+    .remove-file {
+        font-size: 13px;
     }
 }
 
@@ -566,8 +658,19 @@
         line-height: 1.75rem;
     }
 
-    .btn__block button{
+    .btn__block button,
+    .btn__box button {
         font-size: 16px;
+    }
+
+    .job__form .form-control {
+        font-size: 14px;
+    }
+
+    #resume__header,
+    .drop-file-preview__title,
+    .remove-file {
+        font-size: 14px;
     }
 }
 
@@ -598,6 +701,10 @@
 
     .careers__heading {
         font-size: 2rem;
+    }
+
+    #job__modal .modal-content {
+        margin: 0rem;
     }
 
     .careers__desc {
@@ -663,8 +770,18 @@
         line-height: 1.75rem;
     }
 
-    .btn__block button{
+    .btn__block button,
+    .btn__box button {
         font-size: 1rem;
     }
 
+    .job__form .form-control {
+        font-size: 1rem;
+    }
+
+    #resume__header,
+    .drop-file-preview__title,
+    .remove-file {
+        font-size: 1rem;
+    }
 }
